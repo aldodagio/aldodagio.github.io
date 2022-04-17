@@ -1,0 +1,19 @@
+package project7;
+
+public class CourseGrades {
+	
+	private GradedActivity[] grades = new GradedActivity[3];
+	
+	public void setLab(GradedActivity aLab) { grades[0] = aLab; }
+	public void setPassFailExam(PassFailExam aPassFailExam) { grades[1] = aPassFailExam; }
+	public void setEssay(Essay anEssay) { grades[2] = anEssay; }
+	public void setFinalExam(FinalExam aFinalExam) { grades[3] = aFinalExam; }
+	
+/*	@Override
+	public String toString() {
+		
+		return "Lab Score: " + grades[0] +  "Grammer points: " + grammer + "\nSpelling points: " + spelling + "\nLength points: " + correctLength + "\nContent points: " + content + "\n" + "Total Points: " + getScore() + "\nGrade: " + getGrade();
+		
+	}*/
+
+}

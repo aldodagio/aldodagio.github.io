@@ -1,0 +1,14 @@
+package unit1;
+
+import java.io.*;
+
+public class baseModel {
+	
+	private String color;
+	private boolean trans;
+	private String brakes;
+	private boolean airBags;
+	private boolean moonRoof;
+	private int price;
+
+}

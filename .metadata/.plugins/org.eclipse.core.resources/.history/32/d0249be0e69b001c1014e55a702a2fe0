@@ -1,0 +1,94 @@
+package squidGame;
+
+import java.util.ArrayList;
+
+public class StudentSolver {
+	
+	
+	public static ArrayList<Boolean> solve(ArrayList<ArrayList<Integer>> bulbs) {
+      
+		ArrayList<Boolean> set = new ArrayList<Boolean>();
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		int count = 0;
+		int max = 0;
+		
+		
+		for(int i = 0; i < bulbs.size(); i++)
+		{
+			for(int j = 0; j < 3; j++) {
+				if(max < Math.abs(bulbs.get(i).get(j))) {
+					max = Math.abs(Math.abs(bulbs.get(i).get(j)));
+				}
+			}
+		}
+		
+		for(int i = 0; i < max; i++) {
+			
+			for(int  j = 0; j < bulbs.size(); j++) {
+				count = 0;
+				for(int k = 0; k < 3; k++) {
+				
+					if(bulbs.get(j).get(k) < 0) // if it is negative
+					{
+						count++;
+					}
+					if(count == 3) 
+					{
+							if(bulbs.get(j).get(k-1) == bulbs.get(j).get(k)) {
+								if(bulbs.get(j).get(k-2) == bulbs.get(j).get(k-1)) {
+									temp.add(bulbs.get(j).get(k));
+									set.add(bulbs.get(j).get(k), false);
+								}
+							}
+							else if (bulbs.get(j).get(k-1) != bulbs.get(j).get(k) || bulbs.get(j).get(k-2) != bulbs.get(j).get(k)) {
+								temp.add(bulbs.get(j).get(k));
+								set.add(bulbs.get(j).get(k), false);
+							}
+							
+					}
+				if(k == 3 && count == 0) {
+					set.add(bulbs.get(j).get(k), true);
+					set.add(bulbs.get(j).get(k-1), true);
+					set.add(bulbs.get(j).get(k-2), true);
+				}
+			
+					
+				}
+				
+			}
+			
+		}
+		
+		return set;
+		
+		}
+	
+	
+	public static void main(String[] args) {
+		ArrayList<ArrayList<Integer>> bulb = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> one = new ArrayList<Integer>();
+		ArrayList<Integer> two = new ArrayList<Integer>();
+		ArrayList<Integer> three = new ArrayList<Integer>();
+		one.add(-1);
+		one.add(-3);
+		one.add(-7);
+		two.add(10);
+		two.add(13);
+		two.add(4);
+		three.add(2);
+		three.add(8);
+		three.add(11);
+		
+		bulb.add(0, one);
+		bulb.add(1, two);
+		bulb.add(2, three);
+		
+		System.out.println(solve(bulb));
+	
+	}
+	
+}
+	
+	
+
+

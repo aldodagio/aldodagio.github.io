@@ -1,0 +1,249 @@
+package squidGame;
+
+import java.util.ArrayList;
+
+public class StudentSolver {
+	
+	
+	public static ArrayList<Boolean> solve(ArrayList<ArrayList<Integer>> bulbs) {
+      
+		ArrayList<Boolean> set = new ArrayList<Boolean>();
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		int count = 0;
+		int max = 0;
+		
+		
+		for(int i = 0; i < bulbs.size(); i++)
+		{
+			for(int j = 0; j < 3; j++) {
+				if(max < Math.abs(bulbs.get(i).get(j))) {
+					max = Math.abs(Math.abs(bulbs.get(i).get(j)));
+				}
+			}
+		}
+		
+		for(int i = 0; i < max; i++) {
+			
+			for(int  j = 0; j < bulbs.size(); j++) {
+				count = 0;
+				for(int k = 0; k < 3; k++) {
+				
+					if(bulbs.get(j).get(k) < 0) // if it is negative
+					{
+						count++;
+					}
+					if(count == 3) 
+					{
+							if(bulbs.get(j).get(k-1) == bulbs.get(j).get(k)) {
+								if(bulbs.get(j).get(k-2) == bulbs.get(j).get(k-1)) {
+									temp.add(Math.abs(bulbs.get(j).get(k)));
+									set.add(false);
+								}
+							}
+							else if (bulbs.get(j).get(k-1) != bulbs.get(j).get(k) || bulbs.get(j).get(k-2) != bulbs.get(j).get(k)) {
+								temp.add(Math.abs(bulbs.get(j).get(k)));
+								set.add(false);
+							}
+							
+					}
+				if(k == 3 && count == 0) {
+					set.add(true);
+				}
+			
+					
+				}
+				
+			}
+			
+		}
+		
+		return set;
+		
+		}
+	
+	
+	public static void main(String[] args) {
+		ArrayList<ArrayList<Integer>> bulb = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> one = new ArrayList<Integer>();
+		ArrayList<Integer> two = new ArrayList<Integer>();
+		ArrayList<Integer> three = new ArrayList<Integer>();
+		ArrayList<Integer> four = new ArrayList<Integer>();
+		ArrayList<Integer> five = new ArrayList<Integer>();
+		ArrayList<Integer> six = new ArrayList<Integer>();
+		ArrayList<Integer> seven = new ArrayList<Integer>();
+		ArrayList<Integer> eight = new ArrayList<Integer>();
+		ArrayList<Integer> nine = new ArrayList<Integer>();
+		ArrayList<Integer> ten = new ArrayList<Integer>();
+		ArrayList<Integer> eleven = new ArrayList<Integer>();
+		ArrayList<Integer> twelve = new ArrayList<Integer>();
+		ArrayList<Integer> thirteen = new ArrayList<Integer>();
+		ArrayList<Integer> fourteen = new ArrayList<Integer>();
+		ArrayList<Integer> fifteen = new ArrayList<Integer>();
+		ArrayList<Integer> sixteen = new ArrayList<Integer>();
+		ArrayList<Integer> seventeen = new ArrayList<Integer>();
+		ArrayList<Integer> eighteen = new ArrayList<Integer>();
+		ArrayList<Integer> nineteen = new ArrayList<Integer>();
+		ArrayList<Integer> twenty = new ArrayList<Integer>();
+		ArrayList<Integer> twentyOne = new ArrayList<Integer>();
+		ArrayList<Integer> twentyTwo = new ArrayList<Integer>();
+		ArrayList<Integer> twentyThree = new ArrayList<Integer>();
+		ArrayList<Integer> twentyFour = new ArrayList<Integer>();
+		ArrayList<Integer> twentyFive = new ArrayList<Integer>();
+		ArrayList<Integer> twentySix = new ArrayList<Integer>();
+		ArrayList<Integer> twentySeven = new ArrayList<Integer>();
+		ArrayList<Integer> twentyEight = new ArrayList<Integer>();
+		ArrayList<Integer> twentyNine = new ArrayList<Integer>();
+		ArrayList<Integer> thirty = new ArrayList<Integer>();
+		ArrayList<Integer> thirtyOne = new ArrayList<Integer>();
+		ArrayList<Integer> thirtyTwo = new ArrayList<Integer>();
+		ArrayList<Integer> thirtyThree = new ArrayList<Integer>();
+	
+		
+		one.add(-6);
+		one.add(-9);
+		one.add(6);
+		two.add(-5);
+		two.add(8);
+		two.add(-7);
+		three.add(-3);
+		three.add(-4);
+		three.add(4);
+		four.add(-2);
+		four.add(5);
+		four.add(4);
+		five.add(-8);
+		five.add(13);
+		five.add(13);
+		six.add(-9);
+		six.add(13);
+		six.add(-9);
+		seven.add(-9);
+		seven.add(12);
+		seven.add(9);
+		eight.add(5);
+		eight.add(8);
+		eight.add(-10);
+		nine.add(9);
+		nine.add(-11);
+		nine.add(-10);
+		ten.add(4);
+		ten.add(8);
+		ten.add(5);
+		eleven.add(9);
+		eleven.add(11);
+		eleven.add(-14);
+		twelve.add(1);
+		twelve.add(1);
+		twelve.add(-1);
+		thirteen.add(1);
+		thirteen.add(-3);
+		thirteen.add(3);
+		fourteen.add(9);
+		fourteen.add(11);
+		fourteen.add(-10);
+		fifteen.add(-1);
+		fifteen.add(-5);
+		fifteen.add(-6);
+		sixteen.add(8);
+		sixteen.add(10);
+		sixteen.add(8);
+		seventeen.add(-4);
+		seventeen.add(9);
+		seventeen.add(8);
+		eighteen.add(2);
+		eighteen.add(6);
+		eighteen.add(-4);
+		nineteen.add(-5);
+		nineteen.add(9);
+		nineteen.add(6);
+		twenty.add(-4);
+		twenty.add(8);
+		twenty.add(-8);
+		twentyOne.add(-6);
+		twentyOne.add(6);
+		twentyOne.add(10);
+		twentyTwo.add(-2);
+		twentyTwo.add(3);
+		twentyTwo.add(-7);
+		twentyThree.add(-4);
+		twentyThree.add(-8);
+		twentyThree.add(-5);
+		twentyFour.add(6);
+		twentyFour.add(6);
+		twentyFour.add(6);
+		twentyFive.add(5);
+		twentyFive.add(-9);
+		twentyFive.add(6);
+		twentySix.add(3);
+		twentySix.add(-3);
+		twentySix.add(3);
+		twentySeven.add(6);
+		twentySeven.add(6);
+		twentySeven.add(-11);
+		twentyEight.add(-3);
+		twentyEight.add(-5);
+		twentyEight.add(-8);
+		twentyNine.add(8);
+		twentyNine.add(12);
+		twentyNine.add(11);
+		thirty.add(-5);
+		thirty.add(-8);
+		thirty.add(-5);
+		thirtyOne.add(6);
+		thirtyOne.add(-6);
+		thirtyOne.add(7);
+		thirtyTwo.add(8);
+		thirtyTwo.add(9);
+		thirtyTwo.add(13);
+		thirtyThree.add(5);
+		thirtyThree.add(-8);
+		thirtyThree.add(-5);
+		
+		
+		
+		
+		bulb.add(0, one);
+		bulb.add(1, two);
+		bulb.add(2, three);
+		bulb.add(3, four);
+		bulb.add(4, five);
+		bulb.add(5, six);
+		bulb.add(6, seven);
+		bulb.add(7, eight);
+		bulb.add(8, nine);
+		bulb.add(9, ten);
+		bulb.add(10, eleven);
+		bulb.add(11, twelve);
+		bulb.add(12, thirteen);
+		bulb.add(13, fourteen);
+		bulb.add(14, fifteen);
+		bulb.add(15, sixteen);
+		bulb.add(16, seventeen);
+		bulb.add(17, eighteen);
+		bulb.add(18, nineteen);
+		bulb.add(19, twenty);
+		bulb.add(20, twentyOne);
+		bulb.add(21, twentyTwo);
+		bulb.add(22, twentyThree);
+		bulb.add(23, twentyFour);
+		bulb.add(24, twentyFive);
+		bulb.add(25, twentySix);
+		bulb.add(26, twentySeven);
+		bulb.add(27, twentyEight);
+		bulb.add(28, twentyNine);
+		bulb.add(29, thirty);
+		bulb.add(30, thirtyOne);
+		bulb.add(31, thirtyTwo);
+		bulb.add(32, thirtyThree);
+		
+	
+		
+		System.out.println(solve(bulb));
+	
+	}
+	
+}
+	
+	
+
+

@@ -1,0 +1,31 @@
+package project7;
+
+public class FinalExam extends GradedActivity {
+	
+	private int numQuestions;
+	//private double pointsEach;
+	private int numMissed;
+	
+	public FinalExam(int numQ, int numM) {
+		numQuestions = numQ;
+		numMissed = numM;
+		//pointsEach = points;
+	}
+	
+	public void setNumQuestions(int numQ) { numQuestions = numQ; }
+	//public void setPointsEach(double points) { pointsEach = points; }
+	public void setNumMissed(int numM) { numMissed = numM; }
+	public double getNumQuestions() { return numQuestions; }
+	//public double getPointsEach() { return pointsEach; }
+	public double getNumMissed() { return numMissed; }
+	
+	public void setScore(int numQ, int numM) {
+		if(numQ > numM) {
+			double d = numQ-numM;
+			double q = d/numQ;
+			double ans = q*100;
+			//setScore(ans);
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+package project9;
+
+public class ToDoList {
+
+	public void run() {
+	
+	}
+
+	public void addTask() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void nextTask() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

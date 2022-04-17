@@ -1,0 +1,18 @@
+package project7;
+
+public class PassFailExam extends PassFailActivity {
+	
+	private int numQuestions;
+	private double pointsEach;
+	private int numMissed;
+	
+	public PassFailExam() {}
+	public PassFailExam(int numQ, int numM, int min) { 
+		super(min);
+		numQuestions = numQ;
+		numMissed = numM;
+	}
+	public double getPointsEach() { return pointsEach; }
+	public int getNumMissed() { return numMissed; }
+	
+}

@@ -1,0 +1,188 @@
+//package squidGame;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class StudentSolver {
+	
+	public static ArrayList<Integer> getList(ArrayList<int[]> dominos) {
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		for(int i = 0; i < dominos.size();i++) {
+			for(int j = 0; j < dominos.get(i).length; j++) {
+				res.add(dominos.get(i)[j]);
+				}
+			}
+		return res;
+		}
+	
+	public static ArrayList<Integer> getNums(ArrayList<Integer> list){
+		ArrayList<Integer> res = new ArrayList<Integer>();
+		for(int i = 0; i < list.size(); i++) {
+			boolean flag = false;
+			if(res.size() == 0) {
+			res.add(list.get(i));
+			}
+			else if(res.size() > 0) {
+				for(int j = 0; j < res.size(); j++) {
+					if(res.get(j) == list.get(i))
+						flag = true;
+				}
+				if(flag != true)
+					res.add(list.get(i));
+			}
+		}
+		return res;
+	}
+	
+	public static int getCount(ArrayList<Integer> list, int i) {
+		int count = 0;
+		for(int j = 0; j < list.size(); j++) {
+			if(i == list.get(j))
+				count++;
+		}
+		return count;
+	}
+	
+	public static int[] getDomino(ArrayList<int[]> set, int[] dom) {
+		int []res = new int[2];
+
+		for(int i = 0; i < set.size(); i++) {
+			if(!Arrays.equals(dom, set.get(i))) {
+			if(set.get(i)[0] == dom[1]) {
+				for(int k = 0; k < dom.length; k++)
+					res[k] = set.get(i)[k];
+			}
+			}
+		}
+		if(res[0] == 0 && res[1] == 0) {
+			for(int i = 0; i < set.size();i++) {
+				if(!Arrays.equals(dom, set.get(i))) {
+					if(set.get(i)[1] == dom[1]) {
+							int temp = set.get(i)[0];
+							set.get(i)[0] = set.get(i)[1];
+							set.get(i)[1] = temp;
+						for(int j = 0; j < set.size(); j++) {
+							if(!Arrays.equals(dom, set.get(j))) {
+							if(set.get(j)[0] == dom[1]) {
+								for(int l = 0; l < dom.length; l++)
+									res[l] = set.get(j)[l];
+							}
+							}
+						}
+					}
+			}
+		}
+			}
+		return res;
+	}
+	
+	public static ArrayList<int[]> makeDomList(int size, ArrayList<int[]> set, int[] dom, ArrayList<int[]> accum) {
+		int[] a = new int[2];
+		boolean flag = false;
+		if(size == accum.size())
+			return accum;
+		else if(accum.size() == 0) {
+			accum.add(set.get(1));
+			a = getDomino(set, set.get(1));
+			accum.add(a);
+			set.remove(0);
+			return makeDomList(size,set,a,accum);
+		}
+		else {
+			a = getDomino(set, accum.get(accum.size()-1));
+			accum.add(a);
+			/*for(int i = 0; i < set.size();i++) {
+				if(Arrays.equals(accum.get(accum.size()-1), set.get(i)))
+				{
+					set.remove(i);
+					flag = true;
+				}
+			}
+			if(flag == false) {
+				int temp = accum.get(accum.size()-1)[0];
+				accum.get(accum.size()-1)[0] = accum.get(accum.size()-1)[1];
+				accum.get(accum.size()-1)[1] = temp;
+			}
+			for(int i = 0; i < set.size();i++) {
+				if(Arrays.equals(accum.get(accum.size()-1), set.get(i)))
+				{
+					set.remove(i);
+				}
+			}*/
+			for(int i = 0; i < set.size();i++) {
+				if(Arrays.equals(a, set.get(i)))
+				{
+					set.remove(i);
+					flag = true;
+				}
+			}
+			if(flag == false) {
+				int temp = a[0];
+				a[0] = a[1];
+				a[1] = temp;
+			}
+			for(int i = 0; i < set.size();i++) {
+				if(Arrays.equals(a, set.get(i)))
+				{
+					set.remove(i);
+				}
+			}
+			return makeDomList(size,set,a,accum);
+			}
+	}
+
+	
+	public static ArrayList<int[]> solve(ArrayList<int[]> dominos) {
+		
+		ArrayList<int[]> res = new ArrayList<int[]>();
+		int size = dominos.size();
+		/*System.out.print(dominos.get(0)[0] + " ");
+		System.out.println(dominos.get(0)[1]);
+		System.out.print(dominos.get(1)[0] + " ");
+		System.out.println(dominos.get(1)[1]);
+		System.out.print(dominos.get(2)[0] + " ");
+		System.out.println(dominos.get(2)[1]);
+		System.out.print(dominos.get(3)[0] + " ");
+		System.out.println(dominos.get(3)[1]);
+		//System.out.print(dominos.get(4)[0] + " ");
+		//System.out.println(dominos.get(4)[1]);
+		//System.out.print(dominos.get(5)[0] + " ");
+		//System.out.println(dominos.get(5)[1]);
+		System.out.print(makeDomList(size,dominos, dominos.get(0), res).get(0)[0] + " ");
+		System.out.println(makeDomList(size,dominos, dominos.get(0), res).get(0)[1]);
+		System.out.print(makeDomList(size,dominos, dominos.get(0), res).get(1)[0] + " ");
+		System.out.println(makeDomList(size,dominos, dominos.get(0), res).get(1)[1]);
+		System.out.print(makeDomList(size,dominos, dominos.get(0), res).get(2)[0] + " ");
+		System.out.println(makeDomList(size,dominos, dominos.get(0), res).get(2)[1]);
+		System.out.print(makeDomList(size,dominos, dominos.get(0), res).get(3)[0] + " ");
+		System.out.println(makeDomList(size,dominos, dominos.get(0), res).get(3)[1]);
+		//System.out.print(makeDomList(dominos, dominos.get(0), res).get(4)[0] + " ");
+		//System.out.println(makeDomList(dominos, dominos.get(0), res).get(4)[1]);
+		//System.out.print(makeDomList(dominos, dominos.get(0), res).get(5)[0] + " ");
+		//System.out.println(makeDomList(dominos, dominos.get(0), res).get(5)[1]);*/
+		return makeDomList(size,dominos, dominos.get(1), res);	
+		
+	} 	
+	
+	/*public static void main(String[] args) {
+		
+		ArrayList<int[]> v = new ArrayList<int[]>();
+		int a [] = {1,3};
+		int b [] = {2,1};
+		int c [] = {2,3};
+		int d [] = {1,3};
+		//int e [] = {2,2};
+		//int f [] = {1,2};
+		v.add(a);
+		v.add(b);
+		v.add(c);
+		v.add(d);
+		//v.add(e);
+		//v.add(f);
+		
+		solve(v);
+		
+	}*/
+}	
+
+

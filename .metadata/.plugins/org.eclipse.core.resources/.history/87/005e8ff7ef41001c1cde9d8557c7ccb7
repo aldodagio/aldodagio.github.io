@@ -1,0 +1,30 @@
+package project9;
+
+import java.util.PriorityQueue;
+
+public class ToDoList {
+	
+	private PriorityQueue<Task> q = new PriorityQueue<>();
+
+	public void run() {
+	
+	}
+
+	public void addTask(String des) {
+		if(Character.isDigit(des.charAt(4))) {
+		String str = des.substring(4, 5);
+		int i = Integer.parseInt(str);
+		if(i >= 1 && i <= 9) {
+		String str1 = des.substring(6, des.length());
+		Task task = new Task(i,str1);
+		q.add(task);
+		} else System.out.print("The priority must be an integer between 1 and 9. \n");
+		}
+		else System.out.print("The priority must be an integer between 1 and 9. \n");
+	}
+
+	public void nextTask() {
+		System.out.println(q.remove());
+	}
+
+}

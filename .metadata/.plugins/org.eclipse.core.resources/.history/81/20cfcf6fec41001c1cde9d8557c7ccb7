@@ -1,0 +1,12 @@
+package project9;
+
+public class ToDoListTester {
+	public static void main(String[] args) {
+		ToDoList list = new ToDoList();
+		list.run();
+		list.addTask("add 4 wash dishes");
+		list.addTask("add 1 do hw");
+		list.nextTask();
+		list.nextTask();
+	}	
+}

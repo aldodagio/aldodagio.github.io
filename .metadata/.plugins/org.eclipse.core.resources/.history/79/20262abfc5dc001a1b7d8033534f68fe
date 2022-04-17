@@ -1,0 +1,49 @@
+// CIS35A - Aldo Dagio
+// Description - This program checks to see if a number is prime or not.
+
+package extraCredit;
+
+import java.util.Scanner;
+
+public class IsPrime 
+{
+	static public void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int num = input.nextInt();
+		
+		if(isPrime(num))
+			System.out.println("prime");
+		else
+			System.out.println("not prime");
+		
+		input.close();
+	}
+	
+	static boolean isPrime(int num)
+	{	
+        if (num <= 1) 
+            return false; 
+  
+        for (int i = 2; i < num; i++) 
+            if (num % i == 0) 
+                return false; 
+  
+        return true; 
+	}
+}
+
+/*
+Sample 1:
+Enter a number: 
+7
+prime 
+
+Sample 2: 
+Enter a number: 
+8
+not prime
+
+
+ */

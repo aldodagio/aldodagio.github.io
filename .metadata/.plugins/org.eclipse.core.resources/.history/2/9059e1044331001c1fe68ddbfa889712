@@ -1,0 +1,35 @@
+package project7;
+
+public class GradedActivity {
+	
+	private double score;
+	
+	
+	public GradedActivity() {}
+	public void setScore(double s) { score = s; }
+	public double getScore() { return score; }
+	public char getGrade() { 
+		char grade = 0;
+		if(score >= 0 && score <= 100) {
+		if(score>=90)
+			grade = 'A';
+		if(score>=80)
+			grade = 'B';
+		if(score>=70)
+			grade = 'C';
+		if(score>=60)
+			grade = 'D';
+		if(score<60) 
+			grade = 'F';
+		}
+		
+		return grade; 
+		}
+	@Override
+	public String toString() {
+		
+		return "Total Points: " + getScore() + "\nGrade: " + getGrade();
+		
+	}
+
+}

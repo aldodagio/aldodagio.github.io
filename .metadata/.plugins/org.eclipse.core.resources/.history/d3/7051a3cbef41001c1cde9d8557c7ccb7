@@ -1,0 +1,21 @@
+package project9;
+
+public class ToDoListTester {
+	public static void main(String[] args) {
+		ToDoList list = new ToDoList();
+		list.run();
+		list.addTask("add 1 Complete Programming Exercise 15.11");
+		list.addTask("add 8 Read for tomorrow's class");
+		list.addTask("add 3 Soccer practice");
+		list.addTask("add 6 Call parents");
+		list.addTask("add 5 Have dinner with friends");
+		list.addTask("add 9 sleep well");
+		list.addTask("add bad command");
+		list.nextTask();
+		list.nextTask();
+		list.nextTask();
+		list.nextTask();
+		list.nextTask();
+		list.nextTask();
+	}	
+}

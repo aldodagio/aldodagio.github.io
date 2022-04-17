@@ -1,0 +1,11 @@
+package project7;
+
+public class PassFailActivity extends GradedActivity {
+
+	private double minPassingScore;
+	
+	public PassFailActivity() {}
+	public PassFailActivity(double min) { minPassingScore = min; }
+	public char getGrade() { return 'a'; }
+	
+}

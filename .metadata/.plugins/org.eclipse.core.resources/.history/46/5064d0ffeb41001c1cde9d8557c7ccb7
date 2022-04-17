@@ -1,0 +1,25 @@
+package project9;
+
+import java.util.PriorityQueue;
+
+public class ToDoList {
+	
+	private PriorityQueue<Task> q = new PriorityQueue<>();
+
+	public void run() {
+	
+	}
+
+	public void addTask(String des) {
+		String str = des.replaceAll("[^0-9]", "");
+		int i = Integer.parseInt(str);
+		String str1 = des.substring(6, des.length()-1);
+		Task task = new Task(i,str1);
+		q.add(task);
+	}
+
+	public void nextTask() {
+		System.out.println(q.remove().toString());
+	}
+
+}

@@ -1,0 +1,17 @@
+package squidGame;
+
+public class StudentSolver {
+
+	public static int solve(int x, int n) {
+		Scanner input = new Scanner(System.in);
+		int arr[] = new int[x]; // initialize number of lines
+		if(x > 0 && n >0 && x <= n) { // initial check for a working game
+			for(int i = 0; i < n; i++) { // for loop to run through the number of players ==> n
+				int playerNum = i+1;
+				System.out.println("What line would you like to join?");
+				
+			}
+		}
+	}
+	
+}

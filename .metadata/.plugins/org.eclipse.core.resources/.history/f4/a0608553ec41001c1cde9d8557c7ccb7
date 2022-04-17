@@ -1,0 +1,39 @@
+package project9;
+
+public class Task {
+	private int priority;
+	private String description;
+	
+	public Task() {
+		priority = 1;
+		description = "";
+	}
+	public Task(int aPriority, String aDescription) {
+		priority = aPriority;
+		description = aDescription; 
+	}
+/*	@Override
+	public int compareTo(Task task) {
+		if(priority > task.priority)
+			return 1;
+		else if(priority < task.priority)
+			return -1;
+		else return 0;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		Task task = (Task) obj;
+		if(description.equalsIgnoreCase(task.description))
+			return true;
+		else return false;
+	}
+	@Override
+	public int hashCode() {
+		return priority;
+	}*/
+	@Override 
+	public String toString() {
+		return description;
+	}
+	
+}
