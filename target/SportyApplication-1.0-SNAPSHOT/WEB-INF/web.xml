@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>MyHttpHelloServlet</servlet-name>
+        <servlet-class>com.example.SportyApplication.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyHttpHelloServlet</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MyHttpRestaurantServlet</servlet-name>
+        <servlet-class>com.example.SportyApplication.RestaurantServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyHttpRestaurantServlet</servlet-name>
+        <url-pattern>/package_editor</url-pattern>
+    </servlet-mapping>
+</web-app>
