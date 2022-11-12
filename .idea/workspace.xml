@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Fixing path of form action on RestaurantServlet doGet method which caused a HTTP Status 404.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/RestaurantServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/RestaurantServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/RestaurantServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/RestaurantServlet.class" afterDir="false" />
@@ -183,7 +185,7 @@
       <workItem from="1667367778397" duration="589000" />
       <workItem from="1667614254982" duration="34136000" />
       <workItem from="1668035421715" duration="1629000" />
-      <workItem from="1668285730588" duration="1667000" />
+      <workItem from="1668285730588" duration="4937000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -192,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668287709138</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixing path of form action on RestaurantServlet doGet method which caused a HTTP Status 404.">
+      <created>1668287900096</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668287900096</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +233,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet." />
+    <MESSAGE value="Fixing path of form action on RestaurantServlet doGet method which caused a HTTP Status 404." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing path of form action on RestaurantServlet doGet method which caused a HTTP Status 404." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
