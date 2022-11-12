@@ -20,7 +20,7 @@ public class RestaurantServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
-                "</head><form><body>");
+                "</head><form action=\" + request.getContextPath() + \"/DatabaseServlet method=\"get\"><body>");
         out.println("<h1>List of all US cable providers:</h1>");
         out.println("<button>Altice</button><br>");
         out.println("<button>Armstrong</button><br>");
@@ -67,6 +67,7 @@ public class RestaurantServlet extends HttpServlet {
         out.println("<button>Philo</button><br>");
         out.println("<button>Sling TV</button><br>");
         out.println("<button>YouTube TV</button><br>");
+        //out.println("");
         out.println("</body><form></html><br>");
     }
 
