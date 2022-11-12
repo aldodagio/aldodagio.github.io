@@ -16,7 +16,7 @@ public class DatabaseServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
-                "</head><form action=\" + request.getContextPath() + \"/DatabaseServlet method=\"post\"><body>");
+                "</head><form action=\"DatabaseServlet\" method=\"post\"><body>");
         String provider = request.getParameter("provider");
         if(provider.equals("Atlice")){}
         else if(provider.equals("Armstrong")){}

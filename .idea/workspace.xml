@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="DatabaseServlet doGet definition for YouTubeTV is basically defined.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="DatabaseServlet doGet submit button added for form submission.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" afterDir="false" />
     </list>
@@ -182,7 +182,7 @@
       <workItem from="1667367778397" duration="589000" />
       <workItem from="1667614254982" duration="34136000" />
       <workItem from="1668035421715" duration="1629000" />
-      <workItem from="1668285730588" duration="8799000" />
+      <workItem from="1668285730588" duration="8913000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -212,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668294839544</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="DatabaseServlet doGet submit button added for form submission.">
+      <created>1668295067392</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668295067392</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +254,8 @@
     <MESSAGE value="Fixing path of form action on RestaurantServlet doGet method which caused a HTTP Status 404." />
     <MESSAGE value="Adding a DatabaseManager class to be an object that interacts with my local MySQL database." />
     <MESSAGE value="DatabaseServlet doGet definition for YouTubeTV is basically defined." />
-    <option name="LAST_COMMIT_MESSAGE" value="DatabaseServlet doGet definition for YouTubeTV is basically defined." />
+    <MESSAGE value="DatabaseServlet doGet submit button added for form submission." />
+    <option name="LAST_COMMIT_MESSAGE" value="DatabaseServlet doGet submit button added for form submission." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
