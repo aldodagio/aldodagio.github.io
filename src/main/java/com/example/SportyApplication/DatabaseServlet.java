@@ -111,7 +111,7 @@ public class DatabaseServlet extends HttpServlet {
             out.println("<input id=\"hereTV\" type=\"checkbox\">Here TV<br>");
             out.println("<input id=\"gaia\" type=\"checkbox\">Gaia<br>");
         }
-
+        out.println("<button type=\"submit\">Submit</button>");
         out.println("</body><form></html><br>");
     }
 
