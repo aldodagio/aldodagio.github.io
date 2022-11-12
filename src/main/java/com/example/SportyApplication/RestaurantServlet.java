@@ -20,7 +20,7 @@ public class RestaurantServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
-                "</head><form action=\"DatabaseServlet\" method=\"get\"><body>");
+                "</head><form action=\"PackageInfoServlet\" method=\"get\"><body>");
         out.println("<h1>List of all US cable providers:</h1>");
         out.println("<button name=\"provider\" type=\"submit\" value=\"Atlice\">Altice</button><br>");
         out.println("<button name=\"provider\" type=\"submit\" value=\"Armstrong\">Armstrong</button><br>");
