@@ -1,10 +1,14 @@
 package com.example.SportyApplication;
 
+import database.DatabaseManager;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.sql.*;
 
 @WebServlet(name = "DatabaseServlet", value = "/DatabaseServlet")
 public class DatabaseServlet extends HttpServlet {
@@ -62,54 +66,54 @@ public class DatabaseServlet extends HttpServlet {
         else if(provider.equals("Sling TV")){}
         else if(provider.equals("YouTube TV")){
             out.println("<h1>List of YouTube TV plans:</h1>");
-            out.println("<input id=\"basePlan\" type=\"checkbox\">Base Plan<br>");
-            out.println("<input id=\"spanishPlan\" type=\"checkbox\">Spanish Plan<br>");
+            out.println("<input name=\"basePlan\" type=\"checkbox\">Base Plan<br>");
+            out.println("<input name=\"spanishPlan\" type=\"checkbox\">Spanish Plan<br>");
             out.println("<h1>List of YouTube TV Add-Ons:</h1>");
-            out.println("<input id=\"4k_plus\" type=\"checkbox\">4K Plus<br>");
-            out.println("<input id=\"sportsPlus\" type=\"checkbox\">SportsPlus<br>"); // includes RedZone, beIn SPORTS, FOX Soccer Plus, VSiN, Outside TV+, PokerGO+, MAVTV, FanDuel TV, Stadium, Billiard TV, SportsGrid, PlayersTV, Fight Network, IMPACT Wrestling
-            out.println("<input id=\"spanishPlus\" type=\"checkbox\">Spanish Plus<br>");
-            out.println("<input id=\"hboMax\" type=\"checkbox\">HBO Max<br>");
-            out.println("<input id=\"nbaLeaguePass\" type=\"checkbox\">NBA League Pass<br>"); // All live, out of market NBA games included with this add-on
-            out.println("<input id=\"entertainmentPlus\" type=\"checkbox\">Entertainment Plus<br>");
-            out.println("<input id=\"mlbTV\" type=\"checkbox\">MLB.TV<br>"); // All live, out of market MLB games included with this add-on
-            out.println("<input id=\"showtime\" type=\"checkbox\">SHOWTIME<br>"); // includes some sports
-            out.println("<input id=\"starz\" type=\"checkbox\">STARZ<br>");
-            out.println("<input id=\"hallmarkMoviesNow\" type=\"checkbox\">Hallmark Movies Now<br>");
-            out.println("<input id=\"cinemax\" type=\"checkbox\">Cinemax<br>");
-            out.println("<input id=\"epix\" type=\"checkbox\">EPIX<br>");
-            out.println("<input id=\"starzPlusEpix\" type=\"checkbox\">STARZ + EPIX<br>");
-            out.println("<input id=\"pantaya\" type=\"checkbox\">Pantaya<br>");
-            out.println("<input id=\"foxNation\" type=\"checkbox\">FOX Nation<br>");
-            out.println("<input id=\"screenPix\" type=\"checkbox\">ScreenPix<br>");
-            out.println("<input id=\"curiosityStream\" type=\"checkbox\">CuriosityStream<br>");
-            out.println("<input id=\"amcPlus\" type=\"checkbox\">AMC+<br>");
-            out.println("<input id=\"shudder\" type=\"checkbox\">Shudder<br>");
-            out.println("<input id=\"sundanceNow\" type=\"checkbox\">Sundance Now<br>");
-            out.println("<input id=\"acornTV\" type=\"checkbox\">Acorn TV<br>");
-            out.println("<input id=\"ifcFilmsUnlimited\" type=\"checkbox\">IFC Films Unlimited<br>");
-            out.println("<input id=\"allblk\" type=\"checkbox\">ALLBLK<br>");
-            out.println("<input id=\"docurama\" type=\"checkbox\">Docurama<br>");
-            out.println("<input id=\"conTV\" type=\"checkbox\">CONtv<br>");
-            out.println("<input id=\"dove\" type=\"checkbox\">Dove<br>");
-            out.println("<input id=\"lawAndCrime\" type=\"checkbox\">Law & Crime<br>");
-            out.println("<input id=\"upFaithAndFamily\" type=\"checkbox\">UP Faith & Family<br>");
-            out.println("<input id=\"fandor\" type=\"checkbox\">Fandor<br>");
-            out.println("<input id=\"screambox\" type=\"checkbox\">Screambox<br>");
-            out.println("<input id=\"comedyDynamics\" type=\"checkbox\">Comedy Dynamics<br>");
-            out.println("<input id=\"outsideTVFeatures\" type=\"checkbox\">Outside TV Features<br>");
-            out.println("<input id=\"vsin\" type=\"checkbox\">VSiN<br>");
-            out.println("<input id=\"myOutdoorTV\" type=\"checkbox\">MyOutdoorTV<br>"); // premium hunting and fishing, etc.
-            out.println("<input id=\"movieSphere\" type=\"checkbox\">MovieSphere<br>");
-            out.println("<input id=\"theGreatCourses\" type=\"checkbox\">The Great Courses<br>");
-            out.println("<input id=\"rcnTotal\" type=\"checkbox\">RCN Total<br>");
-            out.println("<input id=\"atresplayer\" type=\"checkbox\">ATRESplayer<br>");
-            out.println("<input id=\"dekkoo\" type=\"checkbox\">Dekkoo<br>");
-            out.println("<input id=\"tastemadePlus\" type=\"checkbox\">Tastemade+<br>");
-            out.println("<input id=\"vixPlus\" type=\"checkbox\">ViX+<br>");
-            out.println("<input id=\"magnoliaSelects\" type=\"checkbox\">Magnolia Selects<br>");
-            out.println("<input id=\"topic\" type=\"checkbox\">Topic<br>");
-            out.println("<input id=\"hereTV\" type=\"checkbox\">Here TV<br>");
-            out.println("<input id=\"gaia\" type=\"checkbox\">Gaia<br>");
+            out.println("<input name=\"4k_plus\" type=\"checkbox\">4K Plus<br>");
+            out.println("<input name=\"sportsPlus\" type=\"checkbox\">SportsPlus<br>"); // includes RedZone, beIn SPORTS, FOX Soccer Plus, VSiN, Outside TV+, PokerGO+, MAVTV, FanDuel TV, Stadium, Billiard TV, SportsGrid, PlayersTV, Fight Network, IMPACT Wrestling
+            out.println("<input name=\"spanishPlus\" type=\"checkbox\">Spanish Plus<br>");
+            out.println("<input name=\"hboMax\" type=\"checkbox\">HBO Max<br>");
+            out.println("<input name=\"nbaLeaguePass\" type=\"checkbox\">NBA League Pass<br>"); // All live, out of market NBA games included with this add-on
+            out.println("<input name=\"entertainmentPlus\" type=\"checkbox\">Entertainment Plus<br>");
+            out.println("<input name=\"mlbTV\" type=\"checkbox\">MLB.TV<br>"); // All live, out of market MLB games included with this add-on
+            out.println("<input name=\"showtime\" type=\"checkbox\">SHOWTIME<br>"); // includes some sports
+            out.println("<input name=\"starz\" type=\"checkbox\">STARZ<br>");
+            out.println("<input name=\"hallmarkMoviesNow\" type=\"checkbox\">Hallmark Movies Now<br>");
+            out.println("<input name=\"cinemax\" type=\"checkbox\">Cinemax<br>");
+            out.println("<input name=\"epix\" type=\"checkbox\">EPIX<br>");
+            out.println("<input name=\"starzPlusEpix\" type=\"checkbox\">STARZ + EPIX<br>");
+            out.println("<input name=\"pantaya\" type=\"checkbox\">Pantaya<br>");
+            out.println("<input name=\"foxNation\" type=\"checkbox\">FOX Nation<br>");
+            out.println("<input name=\"screenPix\" type=\"checkbox\">ScreenPix<br>");
+            out.println("<input name=\"curiosityStream\" type=\"checkbox\">CuriosityStream<br>");
+            out.println("<input name=\"amcPlus\" type=\"checkbox\">AMC+<br>");
+            out.println("<input name=\"shudder\" type=\"checkbox\">Shudder<br>");
+            out.println("<input name=\"sundanceNow\" type=\"checkbox\">Sundance Now<br>");
+            out.println("<input name=\"acornTV\" type=\"checkbox\">Acorn TV<br>");
+            out.println("<input name=\"ifcFilmsUnlimited\" type=\"checkbox\">IFC Films Unlimited<br>");
+            out.println("<input name=\"allblk\" type=\"checkbox\">ALLBLK<br>");
+            out.println("<input name=\"docurama\" type=\"checkbox\">Docurama<br>");
+            out.println("<input name=\"conTV\" type=\"checkbox\">CONtv<br>");
+            out.println("<input name=\"dove\" type=\"checkbox\">Dove<br>");
+            out.println("<input name=\"lawAndCrime\" type=\"checkbox\">Law & Crime<br>");
+            out.println("<input name=\"upFaithAndFamily\" type=\"checkbox\">UP Faith & Family<br>");
+            out.println("<input name=\"fandor\" type=\"checkbox\">Fandor<br>");
+            out.println("<input name=\"screambox\" type=\"checkbox\">Screambox<br>");
+            out.println("<input name=\"comedyDynamics\" type=\"checkbox\">Comedy Dynamics<br>");
+            out.println("<input name=\"outsideTVFeatures\" type=\"checkbox\">Outside TV Features<br>");
+            out.println("<input name=\"vsin\" type=\"checkbox\">VSiN<br>");
+            out.println("<input name=\"myOutdoorTV\" type=\"checkbox\">MyOutdoorTV<br>"); // premium hunting and fishing, etc.
+            out.println("<input name=\"movieSphere\" type=\"checkbox\">MovieSphere<br>");
+            out.println("<input name=\"theGreatCourses\" type=\"checkbox\">The Great Courses<br>");
+            out.println("<input name=\"rcnTotal\" type=\"checkbox\">RCN Total<br>");
+            out.println("<input name=\"atresplayer\" type=\"checkbox\">ATRESplayer<br>");
+            out.println("<input name=\"dekkoo\" type=\"checkbox\">Dekkoo<br>");
+            out.println("<input name=\"tastemadePlus\" type=\"checkbox\">Tastemade+<br>");
+            out.println("<input name=\"vixPlus\" type=\"checkbox\">ViX+<br>");
+            out.println("<input name=\"magnoliaSelects\" type=\"checkbox\">Magnolia Selects<br>");
+            out.println("<input name=\"topic\" type=\"checkbox\">Topic<br>");
+            out.println("<input name=\"hereTV\" type=\"checkbox\">Here TV<br>");
+            out.println("<input name=\"gaia\" type=\"checkbox\">Gaia<br>");
         }
         out.println("<button type=\"submit\">Submit</button>");
         out.println("</body><form></html><br>");
@@ -117,6 +121,9 @@ public class DatabaseServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        DatabaseManager db = new DatabaseManager();
+        db.openConnection();
+        // Enter Restaurant name (bar one), zip code(92101), provider(youtube tv), channels(specific add-ons and locals)  into database
+        db.closeConnection();
     }
 }

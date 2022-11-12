@@ -22,13 +22,24 @@ public class DatabaseManager {
         userName = "root";
         password = "";
     }
-    public void openConnection() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException{
-        Class.forName(driver).newInstance();
-        this.setConnection(DriverManager.getConnection(url + dbName +"?zeroDateTimeBehavior=round", userName,
-                password));
+    public void openConnection() {
+        try {
+            this.setConnection(DriverManager.getConnection(url + dbName +"?zeroDateTimeBehavior=round", userName,
+                    password));
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
-    public void closeConnection() throws SQLException {
-        getConnection().close();
-    }
+
+
+    public void closeConnection() {
+
+            try {
+                getConnection().close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+}
 }
