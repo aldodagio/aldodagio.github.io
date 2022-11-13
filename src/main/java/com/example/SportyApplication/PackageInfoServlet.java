@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.sql.*;
 
-@WebServlet(name = "PackageInfoServlet", value = "/PackageInfoServlets")
+@WebServlet(name = "PackageInfoServlet", value = "/PackageInfoServlet")
 public class PackageInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -20,7 +20,7 @@ public class PackageInfoServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
-                "</head><form action=\"DatabaseServlet\" method=\"post\"><body>");
+                "</head><form action=\"DatabaseServlet\" method=\"get\"><body>");
         String provider = request.getParameter("provider");
         if(provider.equals("Atlice")){}
         else if(provider.equals("Armstrong")){}
@@ -121,9 +121,6 @@ public class PackageInfoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DatabaseManager db = new DatabaseManager();
-        db.openConnection();
-        // Enter Restaurant name (bar one), zip code(92101), provider(youtube tv), channels(specific add-ons and locals)  into database
-        db.closeConnection();
+
     }
 }

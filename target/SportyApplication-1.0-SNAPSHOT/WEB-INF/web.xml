@@ -22,4 +22,12 @@
         <servlet-name>MyHttpRestaurantServlet</servlet-name>
         <url-pattern>/package_editor</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>MyHttpPackageInfoServlet</servlet-name>
+        <servlet-class>com.example.SportyApplication.PackageInfoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyHttpPackageInfoServlet</servlet-name>
+        <url-pattern>/packageInfo_editor</url-pattern>
+    </servlet-mapping>
 </web-app>
