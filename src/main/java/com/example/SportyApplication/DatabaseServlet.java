@@ -6,6 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -34,6 +35,13 @@ public class DatabaseServlet extends HttpServlet {
             throwables.printStackTrace();
         }
         db.closeConnection();
+        response.setContentType("text/html");
+
+        // Hello
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<h1>Your input has been registered! Thank you!</h1>");
+        out.println("</body></html>");
     }
 
     @Override

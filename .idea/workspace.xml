@@ -9,10 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Data is now parsed and ready to be used with the DatabaseManager class.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="This version of code is now able to insert rows into mysql database.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/games/GameManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/DatabaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/DatabaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/DatabaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/DatabaseServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +187,7 @@
       <workItem from="1667367778397" duration="589000" />
       <workItem from="1667614254982" duration="34136000" />
       <workItem from="1668035421715" duration="1629000" />
-      <workItem from="1668285730588" duration="27040000" />
+      <workItem from="1668285730588" duration="28826000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -255,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668324647352</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="This version of code is now able to insert rows into mysql database.">
+      <created>1668328075112</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668328075112</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,14 +307,15 @@
     <MESSAGE value="DatabaseServlet is now PackageInfoServlet and there is a new DatabaseServlet class that is currently undefined." />
     <MESSAGE value="PackageInfoServlet is now correctly sending get request to DatabaseServlet" />
     <MESSAGE value="Data is now parsed and ready to be used with the DatabaseManager class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Data is now parsed and ready to be used with the DatabaseManager class." />
+    <MESSAGE value="This version of code is now able to insert rows into mysql database." />
+    <option name="LAST_COMMIT_MESSAGE" value="This version of code is now able to insert rows into mysql database." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java</url>
-          <line>35</line>
+          <line>36</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>

@@ -17,7 +17,7 @@ public class HelloServlet extends HttpServlet {
 
         // Hello
         PrintWriter out = response.getWriter();
-        out.println("<html><form><body>");
+        out.println("<html><form action=\"GameServlet\" method=\"get\"><body>");
         out.println("<label for=\"team\"> Enter the sports team you want to watch: </label>");
         out.println("<input type=\"text\" id=\"team\" name=\"team\"><br><br>");
         out.println("<label for=\"zip\"> Enter your ZIP code: </label>");
