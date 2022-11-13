@@ -6,6 +6,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebServlet(name = "DatabaseServlet", value = "/DatabaseServlet")
@@ -21,6 +22,17 @@ public class DatabaseServlet extends HttpServlet {
         String referer = request.getHeader("referer"); // expecting provider, name, and zip code
         ArrayList<String> queryList = parser.queryStringParser(query);
         ArrayList<String> params = parser.formatParams(parser.stripURL(referer));
+        // params.get(0) -> YouTube TV (provider), params.get(1) -> 92101 (zipCode), params.get(2) -> Bar One (establishmentName)
+        // queryList.get(0) -> basePlan (basePackage), queryList.get(n+1) -> add-ons
+        String provider = params.get(0);
+        String zipCode = params.get(1);
+        String establishmentName = params.get(2);
+        String basePackage = queryList.get(0);
+        try {
+            db.insertRow(provider, zipCode, establishmentName, basePackage, queryList, db);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         db.closeConnection();
     }
 

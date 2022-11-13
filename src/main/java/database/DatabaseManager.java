@@ -42,4 +42,15 @@ public class DatabaseManager {
             }
 
 }
+    public void insertRow(String provider, String zipCode, String establishmentName, String basePackage, ArrayList<String> queryList, DatabaseManager db) throws SQLException {
+        String add_ons = "";
+        for(int i = 0; i < queryList.size(); i++){
+            add_ons += queryList.get(i);
+            add_ons += ",";
+        }
+        String query = "INSERT INTO `packagerecords` (`basePackage`,`zipCode`,`provider`,`addOns`,`establishmentName`) VALUES ('"+ basePackage +"','"+ zipCode +"', '"+ provider +"', '"+ add_ons +"', '"+ establishmentName +"')";
+        Connection c = db.getConnection();
+        Statement s = c.createStatement();
+        s.executeUpdate(query);
+}
 }
