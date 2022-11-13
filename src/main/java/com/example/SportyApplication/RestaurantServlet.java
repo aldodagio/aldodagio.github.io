@@ -21,6 +21,11 @@ public class RestaurantServlet extends HttpServlet {
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
                 "</head><form action=\"PackageInfoServlet\" method=\"get\"><body>");
+        out.println("<h1>Please enter the name of your establishment (restaurant or bar) followed by the zip code in which you are located:</h1>");
+        out.println("<input type=\"text\" name=\"restaurant\"><br>");
+        out.println("<label for=\"restaurant\">Restaurant</label><br>");
+        out.println("<input type=\"text\" name=\"zip\"><br>");
+        out.println("<label for=\"zip\">Zip Code</label><br>");
         out.println("<h1>List of all US cable providers:</h1>");
         out.println("<button name=\"provider\" type=\"submit\" value=\"Atlice\">Altice</button><br>");
         out.println("<button name=\"provider\" type=\"submit\" value=\"Armstrong\">Armstrong</button><br>");
