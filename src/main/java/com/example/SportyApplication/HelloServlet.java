@@ -22,6 +22,7 @@ public class HelloServlet extends HttpServlet {
         out.println("<input type=\"text\" id=\"team\" name=\"team\"><br><br>");
         out.println("<label for=\"zip\"> Enter your ZIP code: </label>");
         out.println("<input type=\"text\" id=\"zip\" name=\"zip\"><br><br>");
+        out.println("<button>Submit</button>");
         out.println("</body></form></html>");
     }
 

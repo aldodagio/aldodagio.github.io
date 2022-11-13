@@ -62,4 +62,34 @@ public class Utility {
         }
         return newParams;
     }
+    public ArrayList<String> getParams(String url){
+        ArrayList<String> params = new ArrayList<String>();
+        String param = "";
+        int i = 0;
+        while(url.charAt(i) != '='){
+            i++;
+        }
+        i++;
+        while(url.charAt(i) != '&'){
+            if(url.charAt(i) == '+'){
+                param += " ";
+            }
+            else{
+                param += url.charAt(i);
+            }
+            i++;
+        }
+        params.add(param);
+        while(url.charAt(i) != '='){
+            i++;
+        }
+        i++;
+        param = "";
+        while(i <= url.length()-1){
+            param += url.charAt(i);
+            i++;
+        }
+        params.add(param);
+        return params;
+    }
 }
