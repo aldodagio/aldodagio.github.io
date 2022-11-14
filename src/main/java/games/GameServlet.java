@@ -27,13 +27,13 @@ public class GameServlet extends HttpServlet {
                 "    <input type=\"hidden\" id=\"startDateTime\" name=\"startDateTime\" value=\"2022-11-13\">\n" +
                 "    <input type=\"hidden\" id=\"api_key\" name=\"api_key\" value=\"32gwu9v9zkpr42bjzx8v9u8w\">");
         out.println("<script>function sendData() { const XHR = new XMLHttpRequest(); const FD = new FormData(form); XHR.open(\"GET\", \"http://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=USA-TX42500-X&startDateTime=2022-11-13T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); XHR.send(FD); XHR.onload = () => { if(XHR.readyState === 4) { if(XHR.status === 200) { var res = JSON.parse(XHR.responseText); " +
-                "const map1 = new Map()" +
+                "const map1 = new Map(); " +
                 "for(let i = 0; i < res.length; i++){" +
-                "if(res[i].program.eventTitle.includes(\"" + params.get(0) + "\")){" +
-                "map1.set(res[i].station.callSign, res[i].station.channel)" + // map entries for callsign and channel for specified team
-                "}" +
+                "if(res[i].program.eventTitle != undefined) { if(res[i].program.eventTitle.includes(\"" + params.get(0) + "\")){" +
+                "map1.set(res[i].station.callSign, res[i].station.channel);" + // map entries for callsign and channel for specified team
+                "} } " +
                 "map1.size;}" +
-                "window.location.replace(\"SuccessPage.html\"); } } }}const form = document.getElementById(\"sportsListings\");form.addEventListener(\"submit\", (event) => {\n" +
+                "window.location.replace(\"Success.jsp\"); } } }}const form = document.getElementById(\"sportsListings\");form.addEventListener(\"submit\", (event) => {\n" +
                 "      event.preventDefault();\n" +
                 "      sendData();\n" +
                 "    });</script>");

@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="doGet on GameServlet is being constructed.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="GameManager and GameServlet created to parse listings json from response and put matching instances of specified team into a map.">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" afterDir="false" />
@@ -23,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -184,7 +185,7 @@
       <workItem from="1667367778397" duration="589000" />
       <workItem from="1667614254982" duration="34136000" />
       <workItem from="1668035421715" duration="1629000" />
-      <workItem from="1668285730588" duration="38702000" />
+      <workItem from="1668285730588" duration="40955000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -270,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668329981021</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="GameManager and GameServlet created to parse listings json from response and put matching instances of specified team into a map.">
+      <created>1668376938676</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668376938676</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +321,8 @@
     <MESSAGE value="Data is now parsed and ready to be used with the DatabaseManager class." />
     <MESSAGE value="This version of code is now able to insert rows into mysql database." />
     <MESSAGE value="doGet on GameServlet is being constructed." />
-    <option name="LAST_COMMIT_MESSAGE" value="doGet on GameServlet is being constructed." />
+    <MESSAGE value="GameManager and GameServlet created to parse listings json from response and put matching instances of specified team into a map." />
+    <option name="LAST_COMMIT_MESSAGE" value="GameManager and GameServlet created to parse listings json from response and put matching instances of specified team into a map." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
