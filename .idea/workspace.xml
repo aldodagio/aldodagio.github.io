@@ -9,18 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Trying to figure out how to send answers back through in str.value in get request. It seems like it is too late once we are in onload function.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/games/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/games/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/games/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/games/GameServlet.class" afterDir="false" />
-    </list>
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="GameManager class being implemented. Algorithm to get string to map proving harder than previously thought. Check at line 25 of class is what is causing the trouble." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -192,7 +181,7 @@
       <workItem from="1668035421715" duration="1629000" />
       <workItem from="1668285730588" duration="42565000" />
       <workItem from="1668466628224" duration="10251000" />
-      <workItem from="1668801046127" duration="20219000" />
+      <workItem from="1668801046127" duration="20777000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -299,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668496249596</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="GameManager class being implemented. Algorithm to get string to map proving harder than previously thought. Check at line 25 of class is what is causing the trouble.">
+      <created>1669017351993</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1669017351993</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +341,8 @@
     <MESSAGE value="GameManager and GameServlet created to parse listings json from response and put matching instances of specified team into a map." />
     <MESSAGE value="Success.jsp added to be used instead of SuccessPage.html" />
     <MESSAGE value="Trying to figure out how to send answers back through in str.value in get request. It seems like it is too late once we are in onload function." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to figure out how to send answers back through in str.value in get request. It seems like it is too late once we are in onload function." />
+    <MESSAGE value="GameManager class being implemented. Algorithm to get string to map proving harder than previously thought. Check at line 25 of class is what is causing the trouble." />
+    <option name="LAST_COMMIT_MESSAGE" value="GameManager class being implemented. Algorithm to get string to map proving harder than previously thought. Check at line 25 of class is what is causing the trouble." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
