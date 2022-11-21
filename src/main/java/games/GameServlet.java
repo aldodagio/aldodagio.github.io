@@ -17,26 +17,14 @@ public class GameServlet extends HttpServlet {
         String query = request.getQueryString(); // expecting channel info (base plan and add-ons)
         ArrayList<String> params = parser.getParams(query);
         //response.setContentType("text/html");
-
+        ArrayList<String> url = parser.stripURL(query);
+        ArrayList<String> formatted = parser.formatParams(url);
+        GameManager map = new GameManager(formatted.get(1));
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
                 "</head><form id=\"sportsListings\"><body>");
-        /*out.println("<input type=\"hidden\" id=\"lineupId\" name=\"lineupId\" value=\"USA-TX42500-X\">\n" +
-                "    <input type=\"hidden\" id=\"startDateTime\" name=\"startDateTime\" value=\"2022-11-13\">\n" +
-                "    <input type=\"hidden\" id=\"api_key\" name=\"api_key\" value=\"32gwu9v9zkpr42bjzx8v9u8w\">");
-        out.println("<script>function sendData() { const XHR = new XMLHttpRequest(); const FD = new FormData(form); XHR.open(\"GET\", \"http://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=USA-TX42500-X&startDateTime=2022-11-13T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); XHR.send(FD); XHR.onload = () => { if(XHR.readyState === 4) { if(XHR.status === 200) { var res = JSON.parse(XHR.responseText); " +
-                "const map1 = new Map(); " +
-                "for(let i = 0; i < res.length; i++){" +
-                "if(res[i].program.eventTitle != undefined) { if(res[i].program.eventTitle.includes(\"" + params.get(0) + "\")){" +
-                "map1.set(res[i].station.callSign, res[i].station.channel);" + // map entries for callsign and channel for specified team
-                "} } " +
-                "map1.size;}" +
-                "window.location.replace(\"Success.jsp\"); } } }}const form = document.getElementById(\"sportsListings\");form.addEventListener(\"submit\", (event) => {\n" +
-                "      event.preventDefault();\n" +
-                "      sendData();\n" +
-                "    });</script>");*/
         out.println("<button type=\"submit\">Submit</button>");
         out.println("</body><form></html><br>");
 

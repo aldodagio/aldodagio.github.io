@@ -18,33 +18,59 @@ public class HelloServlet extends HttpServlet {
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><form id=\"sportsListings\" action=\"GameServlet\" method=\"get\"><body>");
-        out.println("<label for=\"team\"> Enter the sports team you want to watch: </label>");
+        out.println("<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\" type=\"text/javascript\"></script>" +
+                "<label for=\"team\"> Enter the sports team you want to watch: </label>");
         out.println("<input type=\"text\" id=\"team\" name=\"team\"><br><br>");
         out.println("<label for=\"zip\"> Enter your ZIP code: </label>");
         out.println("<input type=\"text\" id=\"zip\" name=\"zip\"><br><br>");
         out.println("<input type=\"hidden\" id=\"lineupId\" name=\"lineupId\" value=\"USA-TX42500-X\">\n" +
-                "    <input type=\"hidden\" id=\"startDateTime\" name=\"startDateTime\" value=\"2022-11-13\">\n" +
+                "<input type=\"hidden\" id=\"startDateTime\" name=\"startDateTime\" value=\"2022-11-13\">\n" +
                 "<input type=\"hidden\" id=\"str\" name=\"str\" value=\"\">" +
-                "    <input type=\"hidden\" id=\"api_key\" name=\"api_key\" value=\"32gwu9v9zkpr42bjzx8v9u8w\">");
-        out.println("<button>Submit</button>");
-        out.println("<script>var team = document.getElementById(\"team\");\n" +
-                "  var zip = document.getElementById(\"zip\");\n" +
+                "<input type=\"hidden\" id=\"api_key\" name=\"api_key\" value=\"32gwu9v9zkpr42bjzx8v9u8w\">");
+        out.println("<button id=\"submitButton\">Submit</button>");
+        out.println("" +
+                "<script>var team = document.getElementById(\"team\");\n" +
+                "var zip = document.getElementById(\"zip\");\n" +
                 "var str = document.getElementById(\"str\");\n" +
-                "function sendRequest() { const XHR = new XMLHttpRequest(); const FD = new FormData(form); XHR.open(\"GET\", \"http://localhost:8080/SportyApplication_war_exploded/hello-servlet?team=\" + team.value +\"&zip=\" + zip.value + \"\"); XHR.send(FD); }" +
-                "function sendData() { const XHR = new XMLHttpRequest(); const FD = new FormData(form); XHR.open(\"GET\", \"http://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=USA-TX42500-X&startDateTime=2022-11-13T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); XHR.send(FD); XHR.onload = () => { if(XHR.readyState === 4) { if(XHR.status === 200) { var res = JSON.parse(XHR.responseText); " +
+                "function sendRequest() {" +
+                "const XHR = new XMLHttpRequest(); " +
+                "const FD = new FormData(form); " +
+                "XHR.open(\"GET\", \"http://localhost:8080/SportyApplication_war_exploded/hello-servlet?team=\" + team.value +\"&zip=\" + zip.value + \"&str=\" + str.value +\"\"); " +
+                "XHR.send(FD);" +
+                "}" +
+                "function sendData() { " +
+                "const XHR = new XMLHttpRequest(); " +
+                "const FD = new FormData(form); " +
+                "XHR.open(\"GET\", \"http://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=USA-TX42500-X&startDateTime=2022-11-13T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); " +
+                "XHR.send(FD); XHR.onload = () => { " +
+                "if (XHR.readyState === 4) { " +
+                "if (XHR.status === 200) {" +
+                "var res = JSON.parse(XHR.responseText); " +
                 "const map1 = new Map(); " +
                 "var name = team.value;" +
-                "for(let i = 0; i < res.length; i++){" +
-                "if(res[i].program.eventTitle != undefined) { if(res[i].program.eventTitle.includes(name)){" +
+                "for (let i = 0; i < res.length; i++){" +
+                "if (res[i].program.eventTitle != undefined) " +
+                "{ " +
+                "if (res[i].program.eventTitle.includes(name)) {" +
                 "map1.set(res[i].station.callSign, res[i].station.channel);" + // map entries for callsign and channel for specified team
-                "} } " +
-                "for(let [key, value] of map1) { str.value += key + \"->\" + value; }" +
-                "map1.size;}" +
-                "/*window.location.replace(\"/GameServlet\");*/ } } }}const form = document.getElementById(\"sportsListings\");form.addEventListener(\"submit\", (event) => {\n" +
-                "      /*event.preventDefault();*/\n" +
-                "      sendData();\n" +
-                " sendRequest();\n" +
-                "    });</script>");
+                "}" +
+                "} " +
+                "for(let [key, value] of map1) { str.value += key + \"->\" + value; " +
+                "}" +
+                "sendRequest();" +
+                "$(\'#sportsListings\').submit();" +
+                "}" +
+                "/*window.location.replace(\"/GameServlet\");*/ " +
+                "} " +
+                "}" +
+                "}" +
+                "}" +
+                "const form = document.getElementById(\"sportsListings\");" +
+                "$(\'#submitButton\').click(function(e) {\n" +
+                "e.preventDefault();\n" +
+                "sendData();\n" +
+                "\n" +
+                "});</script>");
         out.println("</body></form></html>");
     }
 
