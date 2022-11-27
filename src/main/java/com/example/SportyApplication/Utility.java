@@ -10,7 +10,7 @@ public class Utility {
     public ArrayList<String> queryStringParser(String queryString){
        ArrayList<String> packageBuilder = new ArrayList<String>();
        String params = "";
-       for(int i = 0; i < queryString.length()-1; i++){
+       for(int i = 0; i < queryString.length(); i++){
            if(queryString.charAt(i)=='=' || queryString.charAt(i)=='o' && queryString.charAt(i+1)=='n' || queryString.charAt(i)=='n' && queryString.charAt(i-1)=='o'){
 
            }
@@ -18,11 +18,31 @@ public class Utility {
                packageBuilder.add(params);
                params = "";
            }
+           else if(i == queryString.length()-4){
+               params += queryString.charAt(i);
+               packageBuilder.add(params);
+           }
            else{
                params += queryString.charAt(i);
            }
        }
        return packageBuilder;
+    }
+    public ArrayList<String> formatParamsGameServlet(ArrayList<String> params){
+        ArrayList<String> newParams = new ArrayList<String>();
+        for(int i = 0; i < params.size(); i++){
+            String param = "";
+            for(int j = params.get(i).length()-1; j >= 0; j--){
+                if(params.get(i).charAt(j) != '+') {
+                    param += params.get(i).charAt(j);
+                }
+                else{
+                    param += ' ';
+                }
+            }
+            newParams.add(param);
+        }
+        return newParams;
     }
     public ArrayList<String> stripURL(String refererString){
         ArrayList<String> parameters = new ArrayList<String>();
@@ -51,11 +71,17 @@ public class Utility {
         for(int i = 0; i < params.size(); i++){
             String param = "";
             for(int j = params.get(i).length()-1; j >= 0; j--){
-                if(params.get(i).charAt(j) != '+') {
-                    param += params.get(i).charAt(j);
+                if(params.get(i).charAt(j) == '+') {
+                    param += ' ';
+                }
+                else if(params.get(i).charAt(j) == '%'){
+                    param += ", ";
+                    j--;
+                    j--;
+                    j--;
                 }
                 else{
-                    param += ' ';
+                    param += params.get(i).charAt(j);
                 }
             }
             newParams.add(param);

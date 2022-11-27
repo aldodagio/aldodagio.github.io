@@ -17,6 +17,7 @@ public class DatabaseServlet extends HttpServlet {
         DatabaseManager db = new DatabaseManager();
         Utility parser = new Utility();
         db.openConnection();
+        String zipCode = "";
         // Enter Restaurant name (bar one), zip code(92101), provider(youtube tv), channels(specific add-ons and locals)  into database
         // at this point channels (base plan & add-ons) are in the query string and provider,restaurant,zip are all under the referer header inside of the string url value
         String query = request.getQueryString(); // expecting channel info (base plan and add-ons)
@@ -26,11 +27,16 @@ public class DatabaseServlet extends HttpServlet {
         // params.get(0) -> YouTube TV (provider), params.get(1) -> 92101 (zipCode), params.get(2) -> Bar One (establishmentName)
         // queryList.get(0) -> basePlan (basePackage), queryList.get(n+1) -> add-ons
         String provider = params.get(0);
-        String zipCode = params.get(1);
+        String address = params.get(1);
+        zipCode += params.get(1).charAt(address.length()-5);
+        zipCode += params.get(1).charAt(address.length()-4);
+        zipCode += params.get(1).charAt(address.length()-3);
+        zipCode += params.get(1).charAt(address.length()-2);
+        zipCode += params.get(1).charAt(address.length()-1);
         String establishmentName = params.get(2);
         String basePackage = queryList.get(0);
         try {
-            db.insertRow(provider, zipCode, establishmentName, basePackage, queryList, db);
+            db.insertRow(provider, zipCode, establishmentName, basePackage, address, queryList, db);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
