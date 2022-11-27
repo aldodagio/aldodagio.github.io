@@ -22,31 +22,28 @@ public class GameManager {
         String callsign = "";
         String channel = "";
         while(i < query.length()) {
-            if ((query.charAt(i) != '-') && (query.charAt(i) != '%')) { // || ((i > 0) && (query.charAt(i) != '3') && (query.charAt(i - 1) != '%')) || ((i > 0) && (query.charAt(i) != 'E') && (query.charAt(i - 1) != '3'))) {
-                Character c = query.charAt(i);
-                if (i > 0) {
-                    Character d = query.charAt(i - 1);
-                    if (Character.isDigit(c) && !Character.isDigit(d) || !Character.isDigit(c)) {
-                        callsign += query.charAt(i);
+            if ((query.charAt(i) != '-'))  {
+                boolean flag = Character.isDigit(query.charAt(i));
+                    if (flag) {
+                        channel += query.charAt(i);
                         i++;
-                    } else if (!Character.isDigit(c) && Character.isDigit(d) || i == query.length() - 1) {
-                        if (channel.length() > 0) {
+                    } else if ((flag == false) && (channel.length() > 0)) {
                             int ch = Integer.parseInt(channel);
                             map.put(callsign, ch);
                             channel = "";
                             callsign = "";
-                        }
                         callsign += query.charAt(i);
                         i++;
                     } else {
-                        channel += query.charAt(i);
+                        callsign += query.charAt(i);
                         i++;
                     }
-                }
-                else{
-                    callsign += query.charAt(i);
-                    i++;
-                }
+            }
+            else {
+                i++;
+                i++;
+                i++;
+                i++;
             }
         }
     }

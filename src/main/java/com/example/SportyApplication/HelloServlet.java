@@ -41,7 +41,7 @@ public class HelloServlet extends HttpServlet {
                 "function sendData() { " +
                 "const XHR = new XMLHttpRequest(); " +
                 "const FD = new FormData(form); " +
-                "XHR.open(\"GET\", \"http://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=USA-TX42500-X&startDateTime=2022-11-13T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); " +
+                "XHR.open(\"GET\", \"http://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=USA-TX42500-X&startDateTime=2022-11-24T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); " +
                 "XHR.send(FD); XHR.onload = () => { " +
                 "if (XHR.readyState === 4) { " +
                 "if (XHR.status === 200) {" +

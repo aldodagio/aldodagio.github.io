@@ -23,8 +23,8 @@ public class GameServlet extends HttpServlet {
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
-                "    <title>Package Editor</title>\n" +
-                "</head><form id=\"sportsListings\"><body>");
+                "    <title>Summary</title>\n" +
+                "</head><form id=\"results\"><body>");
         out.println("<button type=\"submit\">Submit</button>");
         out.println("</body><form></html><br>");
 
