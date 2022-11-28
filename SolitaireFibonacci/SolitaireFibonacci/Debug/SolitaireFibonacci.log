@@ -1,3 +1,0 @@
-﻿  Solitaire.cpp
-C:\Users\aldod\source\repos\SolitaireFibonacci\SolitaireFibonacci\Solitaire.cpp(22,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  SolitaireFibonacci.vcxproj -> C:\Users\aldod\source\repos\SolitaireFibonacci\Debug\SolitaireFibonacci.exe
