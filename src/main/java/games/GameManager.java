@@ -33,6 +33,9 @@ public class GameManager {
                         i++;
                     } else if ((flag == false) && (channel.length() > 0)) {
                             int ch = Integer.parseInt(channel);
+                            if(callsign.contains("TEAM")){
+                                callsign = "NBA League Pass";
+                            }
                             map.put(callsign, ch);
                             channel = "";
                             callsign = "";

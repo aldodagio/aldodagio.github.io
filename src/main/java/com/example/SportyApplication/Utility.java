@@ -1,8 +1,26 @@
 package com.example.SportyApplication;
 
 import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 public class Utility {
+    public String getDateFormatForGracenoteAPICall(){
+        String date = "";
+        String fDate = ""; // formatted date
+        date = String.valueOf(LocalDateTime.now());
+        fDate += date.charAt(0); // y
+        fDate += date.charAt(1); // y
+        fDate += date.charAt(2); // y
+        fDate += date.charAt(3); // y
+        fDate += date.charAt(4); // first dash
+        fDate += date.charAt(5); // m
+        fDate += date.charAt(6); // m
+        fDate += date.charAt(7); // second dash
+        fDate += date.charAt(8); // d
+        fDate += date.charAt(9); // d
+        return fDate;
+    }
     /*
     * Function is to return a list of all the add-ons and the base package that the bar/restaurant has.
     * The list is obtained from parsing a queryString.

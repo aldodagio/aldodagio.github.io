@@ -14,17 +14,18 @@ public class HelloServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
+        Utility date = new Utility();
 
         // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><form id=\"sportsListings\" action=\"GameServlet\" method=\"get\"><body>");
-        out.println("<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\" type=\"text/javascript\"></script>" +
+        out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\" type=\"text/javascript\"></script>" +
                 "<label for=\"team\"> Enter the sports team you want to watch: </label>");
         out.println("<input type=\"text\" id=\"team\" name=\"team\"><br><br>");
         out.println("<label for=\"zip\"> Enter your ZIP code: </label>");
         out.println("<input type=\"text\" id=\"zip\" name=\"zip\"><br><br>");
         out.println("<input type=\"hidden\" id=\"lineupId\" name=\"lineupId\" value=\"USA-TX42500-X\">\n" +
-                "<input type=\"hidden\" id=\"startDateTime\" name=\"startDateTime\" value=\"2022-11-13\">\n" +
+                "<input type=\"hidden\" id=\"startDateTime\" name=\"startDateTime\" value=\"" + date.getDateFormatForGracenoteAPICall() + "\">\n" +
                 "<input type=\"hidden\" id=\"str\" name=\"str\" value=\"\">" +
                 "<input type=\"hidden\" id=\"api_key\" name=\"api_key\" value=\"32gwu9v9zkpr42bjzx8v9u8w\">");
         out.println("<button id=\"submitButton\">Submit</button>");
@@ -32,16 +33,18 @@ public class HelloServlet extends HttpServlet {
                 "<script>var team = document.getElementById(\"team\");\n" +
                 "var zip = document.getElementById(\"zip\");\n" +
                 "var str = document.getElementById(\"str\");\n" +
+                "var lineup = document.getElementById(\"lineupId\");\n" +
+                "var startDateTime = document.getElementById(\"startDateTime\");\n" +
                 "function sendRequest() {" +
                 "const XHR = new XMLHttpRequest(); " +
                 "const FD = new FormData(form); " +
-                "XHR.open(\"GET\", \"http://localhost:8080/SportyApplication_war_exploded/hello-servlet?team=\" + team.value +\"&zip=\" + zip.value + \"&str=\" + str.value +\"\"); " +
+                "XHR.open(\"GET\", \"https://localhost:8080/SportyApplication_war_exploded/hello-servlet?team=\" + team.value +\"&zip=\" + zip.value + \"&str=\" + str.value +\"\"); " +
                 "XHR.send(FD);" +
                 "}" +
                 "function sendData() { " +
                 "const XHR = new XMLHttpRequest(); " +
                 "const FD = new FormData(form); " +
-                "XHR.open(\"GET\", \"http://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=USA-TX42500-X&startDateTime=2022-11-24T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); " +
+                "XHR.open(\"GET\", \"https://data.tmsapi.com/v1.1/sports/59/events/airings?lineupId=\" + lineup.value +\"&startDateTime=\" + startDateTime.value + \"T20%3A30Z&api_key=32gwu9v9zkpr42bjzx8v9u8w\"); " +
                 "XHR.send(FD); XHR.onload = () => { " +
                 "if (XHR.readyState === 4) { " +
                 "if (XHR.status === 200) {" +
