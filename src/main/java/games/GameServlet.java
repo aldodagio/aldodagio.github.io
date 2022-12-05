@@ -52,8 +52,22 @@ public class GameServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Summary</title>\n" +
-                "</head><form id=\"results\"><body>");
-        out.println("<h1> " + name + " has your game via " + channel + "! Here is their full address: " + address + ". </h1>");
+                "</head><form id=\"results\">" +
+                "<style>" +
+                "body {\n" +
+                "background-color: #dd1144;\n" +
+                "}\n" +
+                "img {\n" +
+                "    width: 100px;\n" +
+                "    height: 50px;\n" +
+                "    position: absolute;\n" +
+                "    left:5;\n" +
+                "    top:5;\n" +
+                "}\n" +
+                "</style>" +
+                "<body>");
+        out.println("<a href=\"http://localhost:8080/SportyApplication_war_exploded/\"><img src=\"sporty_logo.jpg\"></a>");
+        out.println("<br><br><br><h1> " + name + " has your game via " + channel + "! Here is their full address: " + address + ". </h1>");
         out.println("</body><form></html><br>");
     }
 
