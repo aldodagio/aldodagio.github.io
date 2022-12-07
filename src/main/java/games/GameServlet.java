@@ -18,6 +18,7 @@ import java.util.Set;
 public class GameServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
         Utility parser = new Utility();
         String query = request.getQueryString(); // expecting channel info (base plan and add-ons)
         ArrayList<String> params = parser.getParams(query);
@@ -27,7 +28,6 @@ public class GameServlet extends HttpServlet {
         zip += params.get(1).charAt(2);
         zip += params.get(1).charAt(3);
         zip += params.get(1).charAt(4);
-        //response.setContentType("text/html");
         ArrayList<String> url = parser.stripURL(query);
         ArrayList<String> formatted = parser.formatParamsGameServlet(url);
         GameManager map = new GameManager(formatted.get(1));

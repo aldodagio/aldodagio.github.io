@@ -9,11 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Added cosmetic changes to index.jsp.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/games/GameServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +190,7 @@
       <workItem from="1670010829035" duration="1191000" />
       <workItem from="1670029707835" duration="765000" />
       <workItem from="1670228724707" duration="2232000" />
-      <workItem from="1670278337946" duration="2426000" />
+      <workItem from="1670278337946" duration="4793000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -336,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670230391003</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home.">
+      <created>1670280857524</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670280857524</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +397,8 @@
     <MESSAGE value="First working version of wanted functionality for Sporty App. Able to add new rows to column from the manager side. However, not all providers are defined in Provider class. Only YouTube TV is defined as of now. YouTube TV is not defined for all of its add-ons OR its Spanish Plan. Putting your zip code on the customer/user side enables us to check the database for other matching zips. From there we check if their channels satisfy the needed channel that was found using the api call from gracenote. The API call from gracenote is only for basketball games; at least at its current state." />
     <MESSAGE value="Dynamically issuing date and other variables in gracenote api call. Utility class updated to format date for api call. https bug fixed that was causing error in jquery code. League pass should now be readable." />
     <MESSAGE value="Added cosmetic changes to index.jsp." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added cosmetic changes to index.jsp." />
+    <MESSAGE value="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home." />
+    <option name="LAST_COMMIT_MESSAGE" value="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

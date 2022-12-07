@@ -33,7 +33,7 @@ public class HelloServlet extends HttpServlet {
                 "<body>");
         out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\" type=\"text/javascript\"></script>" +
                 "<br><br><br><label for=\"team\"> Enter the sports team you want to watch: </label>");
-         out.println("<a href=\"http://localhost:8080/SportyApplication_war_exploded/\"><img src=\"sporty_logo.jpg\"></a>");
+         out.println("<a href=\"https://localhost:8080/SportyApplication_war_exploded/\"><img src=\"sporty_logo.jpg\"></a>");
         out.println("<input type=\"text\" id=\"team\" name=\"team\"><br><br>");
         out.println("<label for=\"zip\"> Enter your ZIP code: </label>");
         out.println("<input type=\"text\" id=\"zip\" name=\"zip\"><br><br>");
