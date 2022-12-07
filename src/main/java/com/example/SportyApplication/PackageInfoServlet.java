@@ -20,7 +20,20 @@ public class PackageInfoServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
-                "</head><form action=\"DatabaseServlet\" method=\"get\"><body>");
+                "</head><form action=\"DatabaseServlet\" method=\"get\">" +
+                "<style>\n" +
+                "body {\n" +
+                "background-color: #dd1144;\n" +
+                "}\n" +
+                "img {\n" +
+                "width: 100px;\n" +
+                "height: 50px;\n" +
+                "position: absolute;\n" +
+                "left:5;\n" +
+                "top:5;\n" +
+                "}\n" +
+                "</style>" +
+                "<body>");
         String provider = request.getParameter("provider");
         if(provider.equals("Atlice")){}
         else if(provider.equals("Armstrong")){}
@@ -65,7 +78,8 @@ public class PackageInfoServlet extends HttpServlet {
         else if(provider.equals("Philo")){}
         else if(provider.equals("Sling TV")){}
         else if(provider.equals("YouTube TV")){
-            out.println("<h1>List of YouTube TV plans:</h1>");
+            out.println("<a href=\"http://localhost:8080/SportyApplication_war_exploded/\"><img src=\"sporty_logo.jpg\"></a>");
+            out.println("<br><br><br><h1>List of YouTube TV plans:</h1>");
             out.println("<input name=\"basePlan\" type=\"checkbox\">Base Plan<br>");
             out.println("<input name=\"spanishPlan\" type=\"checkbox\">Spanish Plan<br>");
             out.println("<h1>List of YouTube TV Add-Ons:</h1>");

@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Updating code. No significant changes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/games/GameServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +187,8 @@
       <workItem from="1670010829035" duration="1191000" />
       <workItem from="1670029707835" duration="765000" />
       <workItem from="1670228724707" duration="2232000" />
-      <workItem from="1670278337946" duration="4793000" />
+      <workItem from="1670278337946" duration="4922000" />
+      <workItem from="1670452766002" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -346,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670280857524</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Updating code. No significant changes.">
+      <created>1670384200065</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670384200065</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +403,8 @@
     <MESSAGE value="Dynamically issuing date and other variables in gracenote api call. Utility class updated to format date for api call. https bug fixed that was causing error in jquery code. League pass should now be readable." />
     <MESSAGE value="Added cosmetic changes to index.jsp." />
     <MESSAGE value="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home." />
-    <option name="LAST_COMMIT_MESSAGE" value="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home." />
+    <MESSAGE value="Updating code. No significant changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating code. No significant changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

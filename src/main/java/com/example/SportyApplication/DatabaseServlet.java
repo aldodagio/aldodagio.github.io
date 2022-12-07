@@ -45,8 +45,22 @@ public class DatabaseServlet extends HttpServlet {
 
         // Hello
         PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>Your input has been registered! Thank you!</h1>");
+        out.println("<html>" +
+                "<style>\n" +
+                "body {\n" +
+                "background-color: #dd1144;\n" +
+                "}\n" +
+                "img {\n" +
+                "width: 100px;\n" +
+                "height: 50px;\n" +
+                "position: absolute;\n" +
+                "left:5;\n" +
+                "top:5;\n" +
+                "}\n" +
+                "</style>" +
+                "<body>");
+        out.println("<a href=\"http://localhost:8080/SportyApplication_war_exploded/\"><img src=\"sporty_logo.jpg\"></a>");
+        out.println("<br><br><br><h1>Your input has been registered! Thank you!</h1>");
         out.println("</body></html>");
     }
 

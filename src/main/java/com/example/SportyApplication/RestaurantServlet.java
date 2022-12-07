@@ -20,8 +20,22 @@ public class RestaurantServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><head>\n" +
                 "    <title>Package Editor</title>\n" +
-                "</head><form action=\"PackageInfoServlet\" method=\"get\"><body>");
-        out.println("<h1>Please enter the name of your establishment (restaurant or bar) followed by the zip code in which you are located:</h1>");
+                "</head><form action=\"PackageInfoServlet\" method=\"get\">" +
+                "<style>\n" +
+                "body {\n" +
+                "background-color: #dd1144;\n" +
+                "}\n" +
+                "img {\n" +
+                "width: 100px;\n" +
+                "height: 50px;\n" +
+                "position: absolute;\n" +
+                "left:5;\n" +
+                "top:5;\n" +
+                "}\n" +
+                "</style>" +
+                "<body>");
+        out.println("<a href=\"http://localhost:8080/SportyApplication_war_exploded/\"><img src=\"sporty_logo.jpg\"></a>");
+        out.println("<br><br><br><h1>Please enter the name of your establishment (restaurant or bar) followed by the zip code in which you are located:</h1>");
         out.println("<input type=\"text\" name=\"restaurant\"><br>");
         out.println("<label for=\"restaurant\">Restaurant</label><br>");
         out.println("<input type=\"text\" name=\"address\"><br>");
