@@ -18,6 +18,12 @@ public class GameManager {
     public Map<String, Integer> getMap() {
         return this.map;
     }
+    /*
+    * This method takes the values input to the str value that was retrieved
+    * using the GET method call to the Gracenote API. The values are taken from
+    * the returned URL and parsed in this method. Once the values are parsed, the
+    * method fills a Map with the callsign (For example, ESPN) and channel (738).
+    * */
     public void fillMapViaStringParams(String query){
         // param value is 'str'
         // callsign is String value and channel is integer value in map
@@ -54,16 +60,18 @@ public class GameManager {
             }
         }
     }
+    /*
+    *
+    * */
     Map<String,String> doTheyHaveTheGame(String zip, Map<String, Integer> foundListings) throws SQLException {
-        boolean flag = false;
-        Map<String,String> listOfEstablishmentNamesThatHaveTheGame = new LinkedHashMap<String,String>();
-        DatabaseManager db = new DatabaseManager();
+        Map<String,String> listOfEstablishmentNamesThatHaveTheGame = new LinkedHashMap<String,String>(); // Declaring the Map that we will later return with found restaurants/bars.
+        DatabaseManager db = new DatabaseManager(); // We need to use our database to find restaurants/bars in our system that have the needed callsign available in their cable/streaming package and have matching zip codes.
         db.openConnection();
-        Map<Integer,ArrayList<String>> records = new LinkedHashMap<Integer,ArrayList<String>>();
-        records = db.getRestaurantInfoWithMatchingZip(zip, db);
-        ArrayList<Integer> listOfChannels = new ArrayList<Integer>();
-        ArrayList<String> listOfCallsigns = new ArrayList<String>();
-        Set<String> keys1 = foundListings.keySet();
+        Map<Integer,ArrayList<String>> records = new LinkedHashMap<Integer,ArrayList<String>>(); // Declaring a Map that will store our restaurants/bars with matching zip codes.
+        records = db.getRestaurantInfoWithMatchingZip(zip, db); // use the database method to fill our map with restaurants/bars with matching zip codes and the relevant information such as cable/streaming packages.
+        ArrayList<Integer> listOfChannels = new ArrayList<Integer>(); // declaring an ArrayList for all channels that are playing the desired game
+        ArrayList<String> listOfCallsigns = new ArrayList<String>(); // declaring an ArrayList for all callsigns that are playing the desired game
+        Set<String> keys1 = foundListings.keySet(); // Get the keys for the listings found in the Gracenote API call
         for(String key : keys1){
             listOfCallsigns.add(key);
             listOfChannels.add(foundListings.get(key));

@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Updating code. No significant changes.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Adding sporty logo and picture of Brandon and Allan.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/games/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/DatabaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/DatabaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/PackageInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/PackageInfoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/RestaurantServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/RestaurantServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/DatabaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/DatabaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/PackageInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/PackageInfoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/RestaurantServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/RestaurantServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +192,7 @@
       <workItem from="1670029707835" duration="765000" />
       <workItem from="1670228724707" duration="2232000" />
       <workItem from="1670278337946" duration="4922000" />
-      <workItem from="1670452766002" duration="640000" />
+      <workItem from="1670452766002" duration="1694000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -351,7 +355,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670384200065</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Red theme has been added to fan and restaurant/bar module.">
+      <created>1670453509482</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670453509482</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Adding sporty logo and picture of Brandon and Allan.">
+      <created>1670453585827</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670453585827</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +422,9 @@
     <MESSAGE value="Added cosmetic changes to index.jsp." />
     <MESSAGE value="More cosmetic changes added to index.jsp, GameServlet, and HelloServlet. Clickable button added to redirect back to home." />
     <MESSAGE value="Updating code. No significant changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating code. No significant changes." />
+    <MESSAGE value="Red theme has been added to fan and restaurant/bar module." />
+    <MESSAGE value="Adding sporty logo and picture of Brandon and Allan." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding sporty logo and picture of Brandon and Allan." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -416,7 +436,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/games/GameManager.java</url>
-          <line>94</line>
+          <line>102</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -426,7 +446,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/games/GameManager.java</url>
-          <line>85</line>
+          <line>93</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
