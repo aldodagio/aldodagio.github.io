@@ -73,6 +73,8 @@ public class HelloServlet extends HttpServlet {
                 "} " +
                 "for(let [key, value] of map1) { str.value += key + \"->\" + value; " +
                 "}" +
+                "if(str.value === null)" +
+                "{  }" +
                 "sendRequest();" +
                 "$(\'#sportsListings\').submit();" +
                 "}" +
