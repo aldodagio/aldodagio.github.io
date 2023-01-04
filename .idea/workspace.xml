@@ -9,15 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Some GameManager.java documentation added.">
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Adding index.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/games/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/games/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/games/GameManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -71,14 +66,21 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aldod\SportyApplication\src" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,7 +212,8 @@
       <workItem from="1670720940542" duration="1684000" />
       <workItem from="1670865752493" duration="62000" />
       <workItem from="1670866553586" duration="387000" />
-      <workItem from="1672461839876" duration="1015000" />
+      <workItem from="1672461839876" duration="1951000" />
+      <workItem from="1672818300035" duration="1244000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -394,7 +397,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670457890650</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Adding index.html">
+      <created>1672463354604</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1672463354604</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Adding index.html">
+      <created>1672463557216</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1672463557216</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +442,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet." />
     <MESSAGE value="Fixing path of form action on RestaurantServlet doGet method which caused a HTTP Status 404." />
     <MESSAGE value="Adding a DatabaseManager class to be an object that interacts with my local MySQL database." />
     <MESSAGE value="DatabaseServlet doGet definition for YouTubeTV is basically defined." />
@@ -450,7 +466,8 @@
     <MESSAGE value="Red theme has been added to fan and restaurant/bar module." />
     <MESSAGE value="Adding sporty logo and picture of Brandon and Allan." />
     <MESSAGE value="Some GameManager.java documentation added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some GameManager.java documentation added." />
+    <MESSAGE value="Adding index.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding index.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

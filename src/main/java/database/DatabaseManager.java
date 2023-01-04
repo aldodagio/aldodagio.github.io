@@ -13,11 +13,23 @@ public class DatabaseManager {
     private String userName;
     private String password;
     private String driver;
-
+    /*
+     * Parameters: None.
+     * Gets the connection to the database.
+     * Returns: Connection object.
+     * */
     public Connection getConnection() { return connection; }
+    /*
+     * Parameters: Connection object.
+     * Sets the connection to the database.
+     * Returns: None.
+     * */
     private void setConnection(Connection connection) {
         this.connection = connection;
     }
+    /*
+     * Constructor that defines the database to Aldo's local database.
+     * */
     public DatabaseManager(){
         url = "jdbc:mysql://localhost:3306/";
         dbName = "restaurantandbar_info";
@@ -25,6 +37,11 @@ public class DatabaseManager {
         userName = "root";
         password = "";
     }
+    /*
+     * Parameters: None.
+     * Opens the connection to the database.
+     * Returns: None.
+     * */
     public void openConnection() {
         try {
             this.setConnection(DriverManager.getConnection(url + dbName +"?zeroDateTimeBehavior=round", userName,
@@ -33,9 +50,11 @@ public class DatabaseManager {
             throwables.printStackTrace();
         }
     }
-
-
-
+    /*
+     * Parameters: None.
+     * Closes the connection to the database.
+     * Returns: None.
+     * */
     public void closeConnection() {
 
             try {
@@ -45,6 +64,11 @@ public class DatabaseManager {
             }
 
 }
+    /*
+     * Parameters: Takes all column names for a valid entry into package records table.
+     * This method inserts a new row into the database.
+     * Returns: None.
+     * */
     public void insertRow(String provider, String zipCode, String establishmentName, String basePackage, String address, ArrayList<String> queryList, DatabaseManager db) throws SQLException {
         String add_ons = "";
         for(int i = 0; i < queryList.size(); i++){
@@ -56,6 +80,12 @@ public class DatabaseManager {
         Statement s = c.createStatement();
         s.executeUpdate(query);
 }
+    /*
+    * Parameters: Takes fan's zip as a string and a DatabaseManager object
+    * This method finds all restaurants in the database that have the same zip as entered
+    * by the fan.
+    * Returns: Map of channel as an integer -> channel as string
+    * */
     public Map<Integer, ArrayList<String>> getRestaurantInfoWithMatchingZip(String zip, DatabaseManager db) throws SQLException {
         Map<Integer,ArrayList<String>> records = new LinkedHashMap<Integer,ArrayList<String>>();
         String query = "SELECT * FROM `packagerecords` WHERE zipcode = '" + zip + "';";
