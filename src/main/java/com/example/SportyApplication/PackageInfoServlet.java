@@ -78,7 +78,7 @@ public class PackageInfoServlet extends HttpServlet {
         else if(provider.equals("Philo")){}
         else if(provider.equals("Sling TV")){}
         else if(provider.equals("YouTube TV")){
-            out.println("<a href=\"http://localhost:8080/SportyApplication_war_exploded/\"><img src=\"sporty_logo.jpg\"></a>");
+            out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>");
             out.println("<br><br><br><h1>List of YouTube TV plans:</h1>");
             out.println("<input name=\"basePlan\" type=\"checkbox\">Base Plan<br>");
             out.println("<input name=\"spanishPlan\" type=\"checkbox\">Spanish Plan<br>");

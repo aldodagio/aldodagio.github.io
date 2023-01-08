@@ -9,9 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Adding index.html">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Comments added to DB manager class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +64,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -72,30 +79,30 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="SportyApplication:war exploded">
+        <file path="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war">
           <settings>
-            <option name="CONTEXT_PATH" value="/SportyApplication_war_exploded" />
+            <option name="CONTEXT_PATH" value="/SportyApplication_1_0_SNAPSHOT_war" />
           </settings>
-        </artifact>
+        </file>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="26e92f16-7b64-401a-b8a6-22959fdde1d8" />
+        <option name="BASE_DIRECTORY_NAME" value="8d84257b-27af-4326-92be-49b929f01621" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -152,9 +159,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="SportyApplication:war exploded" />
-        </option>
+        <option name="BuildArtifacts" enabled="false" />
       </method>
     </configuration>
     <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
@@ -213,7 +218,9 @@
       <workItem from="1670865752493" duration="62000" />
       <workItem from="1670866553586" duration="387000" />
       <workItem from="1672461839876" duration="1951000" />
-      <workItem from="1672818300035" duration="1244000" />
+      <workItem from="1672818300035" duration="1383000" />
+      <workItem from="1672854712567" duration="353000" />
+      <workItem from="1673123692742" duration="8329000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -411,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672463557216</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Comments added to DB manager class.">
+      <created>1672819582492</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1672819582492</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +456,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixing path of form action on RestaurantServlet doGet method which caused a HTTP Status 404." />
     <MESSAGE value="Adding a DatabaseManager class to be an object that interacts with my local MySQL database." />
     <MESSAGE value="DatabaseServlet doGet definition for YouTubeTV is basically defined." />
     <MESSAGE value="DatabaseServlet doGet submit button added for form submission." />
@@ -467,7 +480,8 @@
     <MESSAGE value="Adding sporty logo and picture of Brandon and Allan." />
     <MESSAGE value="Some GameManager.java documentation added." />
     <MESSAGE value="Adding index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding index.html" />
+    <MESSAGE value="Comments added to DB manager class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments added to DB manager class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -479,8 +493,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/games/GameServlet.java</url>
-          <line>51</line>
+          <line>84</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/games/GameServlet.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
