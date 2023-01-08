@@ -26,8 +26,9 @@ public class GameServlet extends HttpServlet {
         ArrayList<String> url = parser.stripURL(query);
         ArrayList<String> formatted = parser.formatParamsGameServlet(url);
         String strParam = formatted.get(1); // formatted.get(1) is the value for str param
-        // str param is the key parameter here because it contains the list of channels/callsigns if the game was found
         /*
+        * str param is the key parameter in this request because it contains the list of channels/callsigns if the game was found.
+        *
         * Some error handling is implemented here to redirect user before a status 500 error occurs.
         * This error gets caused by str parameter being an empty string.
         * This is caused because of shortcomings of API or the entered team is not playing today.
@@ -36,6 +37,10 @@ public class GameServlet extends HttpServlet {
             // they are either not playing today or due to our api being free we are limited and thus
             // cannot find your game
             PrintWriter out = response.getWriter();
+            /*
+             * This HTML will explain to the user
+             * why there is an error.
+             * */
             out.println("" +
                     "<html><head>\n" +
                     "<title>Error</title>\n" +
@@ -69,13 +74,13 @@ public class GameServlet extends HttpServlet {
         * in the area that has this game available.
         * */
         else {
-            GameManager map = new GameManager(strParam);
-            Map<String, String> placesThatHaveTheGame = new LinkedHashMap<String, String>();
+            GameManager map = new GameManager(strParam); // creating a map of callsign and channel for the game
+            Map<String, String> placesThatHaveTheGame = new LinkedHashMap<String, String>(); // a map to store restaurant/bar info if they can fulfill the callsign/channel requested
 
             zip += params.get(1).charAt(0) + params.get(1).charAt(1) + params.get(1).charAt(2) + params.get(1).charAt(3) + params.get(1).charAt(4);
 
             try {
-                placesThatHaveTheGame = map.doTheyHaveTheGame(zip, map.getMap());
+                placesThatHaveTheGame = map.doTheyHaveTheGame(zip, map.getMap()); // initialize the map with the GameManager method doTheyHaveTheGame
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
@@ -92,6 +97,11 @@ public class GameServlet extends HttpServlet {
                 channel = key;
             }
             PrintWriter out = response.getWriter();
+            /*
+            * This HTML will give a summary of restaurants
+            * that are playing the found game in the users
+            * area.
+            * */
             out.println("<html><head>\n" +
                     "    <title>Summary</title>\n" +
                     "</head><form id=\"results\">" +
