@@ -22,10 +22,12 @@ public class GameManager {
     }
 
     /*
+     * Parameters: String query that needs to be parsed for the parameter values.
      * This method takes the values input to the str value that was retrieved
      * using the GET method call to the Gracenote API. The values are taken from
      * the returned URL and parsed in this method. Once the values are parsed, the
      * method fills a Map with the callsign (For example, ESPN) and channel (738).
+     * Returns: Fills the Map attribute of GameManager class.
      * */
     public void fillMapViaStringParams(String query) {
         int i = 0;
@@ -62,7 +64,10 @@ public class GameManager {
     }
 
     /*
-     *
+     * Parameters: zip code and Map of TV listings where game is being showed.
+     * This method checks if the database contains restaurants/bars in the given zip
+     * entered by the user that can satisfy the given channels found from the API.
+     * Returns: Map with the information for the establishments that have the game available.
      * */
     Map<String, String> doTheyHaveTheGame(String zip, Map<String, Integer> foundListings) throws SQLException {
         Map<String, String> listOfEstablishmentNamesThatHaveTheGame = new LinkedHashMap<String, String>(); // Declaring the Map that we will later return with found restaurants/bars.
