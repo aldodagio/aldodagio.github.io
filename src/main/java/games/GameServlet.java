@@ -36,7 +36,8 @@ public class GameServlet extends HttpServlet {
             // they are either not playing today or due to our api being free we are limited and thus
             // cannot find your game
             PrintWriter out = response.getWriter();
-            out.println("<html><head>\n" +
+            out.println("" +
+                    "<html><head>\n" +
                     "<title>Error</title>\n" +
                     "</head><form id=\"results\">" +
                     "<style>" +
@@ -52,7 +53,8 @@ public class GameServlet extends HttpServlet {
                     "}\n" +
                     "</style>" +
                     "<body>");
-            out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>" +
+            out.println("" +
+                    "<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>" +
                     "<br><br><br><h1>We are sorry, we were not able to find your game.</h1>" +
                     "<h2>One of the following errors occured:</h2><br>" +
                     "<h3>- Your sports team is not playing today</h3><br>" +
@@ -60,11 +62,18 @@ public class GameServlet extends HttpServlet {
                     "<h3>- Our free subscription for Gracenote API is preventing us from finding all possible channels.</h3>");
             out.println("</body></html><br>");
         }
+        /*
+        * The else block handles the case that str is not an empty string.
+        * In this case the game was found from the Gracenote API and we
+        * must check the database to see if there is a bar/restaurant
+        * in the area that has this game available.
+        * */
         else {
             GameManager map = new GameManager(strParam);
             Map<String, String> placesThatHaveTheGame = new LinkedHashMap<String, String>();
 
             zip += params.get(1).charAt(0) + params.get(1).charAt(1) + params.get(1).charAt(2) + params.get(1).charAt(3) + params.get(1).charAt(4);
+
             try {
                 placesThatHaveTheGame = map.doTheyHaveTheGame(zip, map.getMap());
             } catch (SQLException throwables) {
