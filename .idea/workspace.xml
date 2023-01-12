@@ -9,16 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Comments added to DB manager class.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="Helpful comments added to GameManager.java.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/DatabaseServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/PackageInfoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/RestaurantServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/games/GameServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,17 +76,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
@@ -220,7 +206,8 @@
       <workItem from="1672461839876" duration="1951000" />
       <workItem from="1672818300035" duration="1383000" />
       <workItem from="1672854712567" duration="353000" />
-      <workItem from="1673123692742" duration="8329000" />
+      <workItem from="1673123692742" duration="10190000" />
+      <workItem from="1673497840952" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -425,7 +412,35 @@
       <option name="project" value="LOCAL" />
       <updated>1672819582492</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Some error handling implemented">
+      <created>1673143840092</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673143840092</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Some error handling implemented">
+      <created>1673144022195</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1673144022196</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Helpful comments added to GameServlet.java.">
+      <created>1673146266612</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1673146266612</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Helpful comments added to GameManager.java.">
+      <created>1673146751967</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673146751968</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,9 +471,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding a DatabaseManager class to be an object that interacts with my local MySQL database." />
-    <MESSAGE value="DatabaseServlet doGet definition for YouTubeTV is basically defined." />
-    <MESSAGE value="DatabaseServlet doGet submit button added for form submission." />
     <MESSAGE value="DatabaseServlet doGet form action corrected." />
     <MESSAGE value="DatabaseManager openConnection and closeConnection methods now working inside doPost method (not causing unwanted errors)." />
     <MESSAGE value="DatabaseServlet is now PackageInfoServlet and there is a new DatabaseServlet class that is currently undefined." />
@@ -481,7 +493,10 @@
     <MESSAGE value="Some GameManager.java documentation added." />
     <MESSAGE value="Adding index.html" />
     <MESSAGE value="Comments added to DB manager class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments added to DB manager class." />
+    <MESSAGE value="Some error handling implemented" />
+    <MESSAGE value="Helpful comments added to GameServlet.java." />
+    <MESSAGE value="Helpful comments added to GameManager.java." />
+    <option name="LAST_COMMIT_MESSAGE" value="Helpful comments added to GameManager.java." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -493,12 +508,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/games/GameServlet.java</url>
-          <line>84</line>
+          <line>99</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/games/GameServlet.java</url>
-          <line>34</line>
+          <line>35</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>

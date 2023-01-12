@@ -15,8 +15,6 @@ public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         Utility date = new Utility();
-
-        // Hello
         PrintWriter out = response.getWriter();
         out.println("<html><form id=\"sportsListings\" action=\"GameServlet\" method=\"get\">" +
                 "<style> body { \n" +
@@ -33,7 +31,8 @@ public class HelloServlet extends HttpServlet {
                 "<body>");
         out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\" type=\"text/javascript\"></script>" +
                 "<br><br><br><label for=\"team\"> Enter the sports team you want to watch: </label>");
-         out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>");
+         //out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>");
+        out.println("<a href=\"https://www.sportyapplication.com/\"><img src=\"sporty_logo.jpg\">
         out.println("<input type=\"text\" id=\"team\" name=\"team\"><br><br>");
         out.println("<label for=\"zip\"> Enter your ZIP code: </label>");
         out.println("<input type=\"text\" id=\"zip\" name=\"zip\"><br><br>");
@@ -51,7 +50,8 @@ public class HelloServlet extends HttpServlet {
                 "function sendRequest() {" +
                 "const XHR = new XMLHttpRequest(); " +
                 "const FD = new FormData(form); " +
-                "XHR.open(\"GET\", \"https://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/hello-servlet?team=\" + team.value +\"&zip=\" + zip.value + \"&str=\" + str.value +\"\"); " +
+                //"XHR.open(\"GET\", \"https://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/hello-servlet?team=\" + team.value +\"&zip=\" + zip.value + \"&str=\" + str.value +\"\"); " +
+                "XHR.open(\"GET\", \"https://www.sportyapplication.com/hello-servlet?team=\" + team.value +\"&zip=\" + zip.value + \"&str=\" + str.value +\"\"); " +
                 "XHR.send(FD);" +
                 "}" +
                 "function sendData() { " +

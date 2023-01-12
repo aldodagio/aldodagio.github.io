@@ -59,7 +59,8 @@ public class GameServlet extends HttpServlet {
                     "</style>" +
                     "<body>");
             out.println("" +
-                    "<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>" +
+                    //"<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>" +
+                    "<a href=\"https://www.sportyapplication.com/\"><img src=\"sporty_logo.jpg\"></a>" +
                     "<br><br><br><h1>We are sorry, we were not able to find your game.</h1>" +
                     "<h2>One of the following errors occured:</h2><br>" +
                     "<h3>- Your sports team is not playing today</h3><br>" +
@@ -118,7 +119,8 @@ public class GameServlet extends HttpServlet {
                     "}\n" +
                     "</style>" +
                     "<body>");
-            out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>");
+            //out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>");
+            out.println("<a href=\"https://www.sportyapplication.com/\"><img src=\"sporty_logo.jpg\"></a>");
             out.println("<br><br><br><h1> " + name + " has your game via " + channel + "! Here is their full address: " + address + ". </h1>");
             out.println("</body><form></html><br>");
         }

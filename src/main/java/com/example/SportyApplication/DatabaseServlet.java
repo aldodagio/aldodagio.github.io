@@ -59,7 +59,8 @@ public class DatabaseServlet extends HttpServlet {
                 "}\n" +
                 "</style>" +
                 "<body>");
-        out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>");
+        //out.println("<a href=\"http://localhost:8080/SportyApplication_1_0_SNAPSHOT_war/\"><img src=\"sporty_logo.jpg\"></a>");
+        out.println("<a href=\"https://www.sportyapplication.com/\"><img src=\"sporty_logo.jpg\"></a>");
         out.println("<br><br><br><h1>Your input has been registered! Thank you!</h1>");
         out.println("</body></html>");
     }
