@@ -31,7 +31,8 @@ public class DatabaseManager {
      * Constructor that defines the database to Aldo's local database.
      * */
     public DatabaseManager(){
-        url = "jdbc:mysql://localhost:3306/";
+        //url = "jdbc:mysql://localhost:3306/";
+        url = "jdbc:mysql://mysql3000.mochahost.com:3306/";
         dbName = "restaurantandbar_info";
         driver = "com.mysql.jdbc.Driver";
         userName = "root";
