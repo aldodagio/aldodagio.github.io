@@ -9,9 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="www.sportyapplication.com reference project instead of localhost.">
+    <list default="true" id="e8bf50d7-93e7-4a29-89ab-365e3390aa85" name="Default Changelist" comment="mysql3000.mochahost.com added as MySQL remote DB. This reference was changed in DatabaseManager class instead of localhost DB.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SportyApplication/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/DatabaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/DatabaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/PackageInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/PackageInfoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/RestaurantServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/com/example/SportyApplication/RestaurantServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/database/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/SportyApplication-1.0-SNAPSHOT/WEB-INF/classes/games/GameServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/DatabaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/DatabaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/PackageInfoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/PackageInfoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/RestaurantServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/SportyApplication/RestaurantServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/games/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/games/GameManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/games/GameServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/games/GameServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +219,8 @@
       <workItem from="1672854712567" duration="353000" />
       <workItem from="1673123692742" duration="10190000" />
       <workItem from="1673497840952" duration="1890000" />
-      <workItem from="1675370693114" duration="489000" />
+      <workItem from="1675370693114" duration="2089000" />
+      <workItem from="1675389746003" duration="655000" />
     </task>
     <task id="LOCAL-00001" summary="Adding DatabaseServlet and seeing if RestaurantServlet is working at current state. Want to know if it is sending data to next servlet.">
       <created>1668287709138</created>
@@ -444,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673502813476</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="mysql3000.mochahost.com added as MySQL remote DB. This reference was changed in DatabaseManager class instead of localhost DB.">
+      <created>1675371266415</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1675371266415</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +498,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DatabaseManager openConnection and closeConnection methods now working inside doPost method (not causing unwanted errors)." />
     <MESSAGE value="DatabaseServlet is now PackageInfoServlet and there is a new DatabaseServlet class that is currently undefined." />
     <MESSAGE value="PackageInfoServlet is now correctly sending get request to DatabaseServlet" />
     <MESSAGE value="Data is now parsed and ready to be used with the DatabaseManager class." />
@@ -500,7 +522,8 @@
     <MESSAGE value="Helpful comments added to GameServlet.java." />
     <MESSAGE value="Helpful comments added to GameManager.java." />
     <MESSAGE value="www.sportyapplication.com reference project instead of localhost." />
-    <option name="LAST_COMMIT_MESSAGE" value="www.sportyapplication.com reference project instead of localhost." />
+    <MESSAGE value="mysql3000.mochahost.com added as MySQL remote DB. This reference was changed in DatabaseManager class instead of localhost DB." />
+    <option name="LAST_COMMIT_MESSAGE" value="mysql3000.mochahost.com added as MySQL remote DB. This reference was changed in DatabaseManager class instead of localhost DB." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
